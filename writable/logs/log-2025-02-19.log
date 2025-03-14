@@ -1,0 +1,10 @@
+CRITICAL - 2025-02-19 12:57:11 --> Undefined variable: nav
+#0 C:\xampp\htdocs\prueba\app\Helpers\breadcrumb_helper.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 12, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(36): breadcrumb_panel('Usuarios Todos', Array)
+#2 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(53): App\Controllers\Panel\Dashboard->load_data()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#5 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}

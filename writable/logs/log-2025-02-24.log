@@ -1,0 +1,55 @@
+CRITICAL - 2025-02-24 15:03:12 --> Cannot declare class App\Controllers\Panel\Portal, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-02-24 15:03:18 --> Cannot declare class App\Controllers\Panel\Portal, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-02-24 15:03:19 --> Cannot declare class App\Controllers\Panel\Portal, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-02-24 15:03:20 --> Cannot declare class App\Controllers\Panel\Portal, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-02-24 15:03:29 --> Cannot declare class App\Controllers\Panel\Portal, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-02-24 17:20:44 --> class_exists() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'class_exists() ...', 'C:\\xampp\\htdocs...', 797, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists(Array, true)
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-02-24 17:21:44 --> class_exists() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'class_exists() ...', 'C:\\xampp\\htdocs...', 797, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists(Array, true)
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-02-24 17:22:04 --> class_exists() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'class_exists() ...', 'C:\\xampp\\htdocs...', 797, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists(Array, true)
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-02-24 17:22:05 --> class_exists() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'class_exists() ...', 'C:\\xampp\\htdocs...', 797, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists(Array, true)
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-02-24 17:22:05 --> class_exists() expects parameter 1 to be string, array given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'class_exists() ...', 'C:\\xampp\\htdocs...', 797, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists(Array, true)
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

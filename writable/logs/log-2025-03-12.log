@@ -1,0 +1,239 @@
+CRITICAL - 2025-03-12 10:06:56 --> Cannot use object of type CodeIgniter\HTTP\RedirectResponse as array
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Dashboard.php(67): App\Controllers\Panel\Dashboard->make_view('panel/Dashboard', Object(CodeIgniter\HTTP\RedirectResponse))
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#6 {main}
+ERROR - 2025-03-12 10:10:32 --> Unknown column 'usuarios.id_usuario' in 'field list'
+CRITICAL - 2025-03-12 10:10:32 --> Unknown column 'usuarios.id_usuario' in 'field list'
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `usuario...', 0)
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `usuario...')
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `usuario...')
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `usuario...', Array, false)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Model.php(210): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Models\Tabla_usuarios.php(78): CodeIgniter\BaseModel->first()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(40): App\Models\Tabla_usuarios->loginUsuario('userci@example....', 'c1e2bc032dc2d0b...')
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#10 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#13 {main}
+CRITICAL - 2025-03-12 15:07:06 --> Cannot use object of type CodeIgniter\HTTP\RedirectResponse as array
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Dashboard.php(67): App\Controllers\Panel\Dashboard->make_view('panel/Dashboard', Object(CodeIgniter\HTTP\RedirectResponse))
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#6 {main}
+CRITICAL - 2025-03-12 15:07:38 --> Cannot use object of type CodeIgniter\HTTP\RedirectResponse as array
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Dashboard.php(67): App\Controllers\Panel\Dashboard->make_view('panel/Dashboard', Object(CodeIgniter\HTTP\RedirectResponse))
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#6 {main}
+CRITICAL - 2025-03-12 15:52:09 --> Undefined variable: usuarios
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Views\Panel\usuarios.php(24): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\B...', 24, Array)
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\wamp64\\www\\B...')
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(62): view('panel/usuarios', Array)
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(67): App\Controllers\Panel\Usuarios->make_view('panel/usuarios', Array)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#11 {main}
+CRITICAL - 2025-03-12 19:56:26 --> Class 'App\Controllers\Panel\Tabla_usuarios' not found
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 19:58:27 --> Class 'App\Controllers\Panel\UsuarioModel' not found
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 19:58:58 --> Class 'App\Controllers\Panel\UsuarioModel' not found
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 19:59:00 --> Class 'App\Controllers\Panel\UsuarioModel' not found
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 19:59:05 --> Call to undefined method App\Controllers\Panel\Usuarios::getUsuarios()
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 19:59:55 --> Call to undefined method App\Controllers\Panel\Usuarios::getUsuarios()
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 20:03:05 --> Call to undefined method App\Controllers\Panel\Usuarios::getUsuarios()
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#5 {main}
+CRITICAL - 2025-03-12 20:03:32 --> Cannot use object of type stdClass as array
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(63): view('panel/usuarios', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(72): App\Controllers\Panel\Usuarios->make_view('panel/usuarios', Array)
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#10 {main}
+CRITICAL - 2025-03-12 20:11:57 --> Cannot use object of type stdClass as array
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(63): view('panel/usuarios', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(73): App\Controllers\Panel\Usuarios->make_view('panel/usuarios', Array)
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#10 {main}
+CRITICAL - 2025-03-12 20:21:36 --> Undefined variable: menu_lateral
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Views\plantillas\panel_base.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\B...', 79, Array)
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\wamp64\\www\\B...')
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('plantillas/pane...', Array, true)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(72): view('panel/usuarios', Array)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#11 {main}
+CRITICAL - 2025-03-12 21:13:13 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_aceptados.php(63): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_aceptados.php(74): App\Controllers\Panel\Usuarios_aceptados->make_view('panel/usuarios_...', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_aceptados->index()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_aceptados))
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#9 {main}
+CRITICAL - 2025-03-12 21:43:43 --> Invalid file: panel/usuarios.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios....')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(63): view('panel/usuarios', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\Usuarios.php(72): App\Controllers\Panel\Usuarios->make_view('panel/usuarios', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios->index()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios))
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#9 {main}
+CRITICAL - 2025-03-12 21:50:17 --> Cannot declare class App\Controllers\Usuarios_aceptados, because the name is already in use
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2025-03-12 21:51:14 --> Invalid file: panel/usuarios.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios....')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(63): view('panel/usuarios', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(72): App\Controllers\Panel\Usuarios_pendientes->make_view('panel/usuarios', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#9 {main}
+CRITICAL - 2025-03-12 22:24:34 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(63): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(76): App\Controllers\Panel\Usuarios_pendientes->make_view('panel/usuarios_...', Array)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->inactivos()
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#9 {main}
+CRITICAL - 2025-03-12 22:28:48 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(64): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#8 {main}
+CRITICAL - 2025-03-12 22:29:10 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(64): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#8 {main}
+CRITICAL - 2025-03-12 22:31:05 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(75): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#8 {main}
+CRITICAL - 2025-03-12 22:31:23 --> Invalid file: panel/usuarios_inactivos.php
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('panel/usuarios_...')
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(75): view('panel/usuarios_...', Array)
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#8 {main}
+CRITICAL - 2025-03-12 22:44:07 --> Undefined property: stdClass::$estado_usuario
+#0 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Views\Panel\usuarios_pendientes.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\wamp64\\www\\B...', 27, Array)
+#1 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\wamp64\\www\\B...')
+#2 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/usuarios_...', Array, true)
+#4 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(63): view('panel/usuarios_...', Array)
+#5 C:\wamp64\www\Bienestar_Animal_Tlaxcala\app\Controllers\Panel\usuarios_pendientes.php(76): App\Controllers\Panel\Usuarios_pendientes->make_view('panel/usuarios_...', Array)
+#6 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Usuarios_pendientes->index()
+#7 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Usuarios_pendientes))
+#8 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\wamp64\www\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\wamp64\www\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\B...')
+#11 {main}

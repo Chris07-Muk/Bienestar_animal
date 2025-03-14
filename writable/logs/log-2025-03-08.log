@@ -1,0 +1,48 @@
+CRITICAL - 2025-03-08 20:03:56 --> Undefined property: stdClass::$email_usuario
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-03-08 20:04:41 --> Undefined property: stdClass::$nombre_usuario
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 50, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-03-08 20:04:58 --> Undefined property: stdClass::$id_rol
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 53, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-03-08 20:11:42 --> Undefined property: stdClass::$email_usuario
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(49): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 49, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-03-08 20:12:27 --> Undefined property: stdClass::$nombre_usuario
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 50, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2025-03-08 20:12:47 --> Undefined property: stdClass::$id_rol
+#0 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\app\Controllers\Usuario\Login.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\xampp\\htdocs...', 53, Array)
+#1 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Usuario\Login->validar_usuario()
+#2 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuario\Login))
+#3 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\Bienestar_Animal_Tlaxcala\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

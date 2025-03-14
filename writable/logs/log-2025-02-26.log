@@ -1,0 +1,32 @@
+CRITICAL - 2025-02-26 10:22:05 --> Undefined variable: menu_lateral
+#0 C:\wamp64\www\prueba2\app\Views\plantillas\panel_base.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\wamp64\\www\\p...', 79, Array)
+#1 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\wamp64\\www\\p...')
+#2 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('plantillas/pane...', Array, true)
+#4 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('panel/dashboard', Array, true)
+#5 C:\wamp64\www\prueba2\app\Controllers\Panel\Dashboard.php(40): view('panel/dashboard', Array)
+#6 C:\wamp64\www\prueba2\app\Controllers\Panel\Dashboard.php(46): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#7 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#8 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#9 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\wamp64\www\prueba2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\p...')
+#12 {main}
+CRITICAL - 2025-02-26 10:26:26 --> Call to undefined function App\Controllers\Panel\crear_menu_panel()
+#0 C:\wamp64\www\prueba2\app\Controllers\Panel\Dashboard.php(47): App\Controllers\Panel\Dashboard->make_view('panel/Dashboard', Array)
+#1 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#2 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#3 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\wamp64\www\prueba2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\p...')
+#6 {main}
+CRITICAL - 2025-02-26 10:27:04 --> Undefined index: id
+#0 C:\wamp64\www\prueba2\app\Helpers\menu_lateral_panel_helper.php(70): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\wamp64\\www\\p...', 70, Array)
+#1 C:\wamp64\www\prueba2\app\Controllers\Panel\Dashboard.php(39): crear_menu_panel()
+#2 C:\wamp64\www\prueba2\app\Controllers\Panel\Dashboard.php(47): App\Controllers\Panel\Dashboard->make_view('panel/Dashboard', Array)
+#3 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#4 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#5 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\wamp64\www\prueba2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\wamp64\www\prueba2\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\wamp64\\www\\p...')
+#8 {main}

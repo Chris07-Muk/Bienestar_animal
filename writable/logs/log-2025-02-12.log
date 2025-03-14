@@ -1,0 +1,45 @@
+CRITICAL - 2025-02-12 12:22:48 --> Undefined variable: content
+#0 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(26): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#2 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-02-12 12:29:15 --> Undefined variable: content
+#0 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(26): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#2 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-02-12 12:29:32 --> Undefined variable: content
+#0 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(26): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#2 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-02-12 12:30:20 --> Undefined variable: content
+#0 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(26): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#2 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2025-02-12 12:30:22 --> Undefined variable: content
+#0 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(20): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 20, Array)
+#1 C:\xampp\htdocs\prueba\app\Controllers\Panel\Dashboard.php(26): App\Controllers\Panel\Dashboard->make_view('panel/dashboard', Array)
+#2 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Panel\Dashboard->index()
+#3 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel\Dashboard))
+#4 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\prueba\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\prueba\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
