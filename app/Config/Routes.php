@@ -40,7 +40,7 @@ $routes->get('/Usuarios', 'Panel/Usuarios::index');
 $routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
 $routes->get('/usuarios_pendientes', 'Panel/usuarios_pendientes::index');
 $routes->get('/Reportes_Aceptados', 'Panel/Reportes_Aceptados::index');
-$routes->get('/Reportes_pendientes', 'Panel/Reportes_pendientes::index');
+$routes->get('/Reportes_Pendientes', 'Panel/Reportes_Pendientes::index');
 $routes->get('/Adopciones', 'Panel/Adopciones::index');
 $routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
 

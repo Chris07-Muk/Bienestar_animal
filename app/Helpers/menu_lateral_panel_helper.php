@@ -35,6 +35,30 @@ function configurar_menu_panel() {
         'id' => 'opcionb_menu'
     ];
 
+    // Opción con submenús
+    $menu['reportes'] = [
+        'is_active' => false,
+        'href' => '#',
+        'text' => 'Reportes',
+        'icon' => 'fa fa-battery-full',
+        'submenu' => [
+            
+            [
+                'is_active' => false,
+                'href' => route_to('Reportes_Aceptados'),
+                'text' => 'Reportes aceptados',
+                'icon' => 'fa fa-battery-three-quarters'
+            ],
+            [
+                'is_active' => false,
+                'href' => route_to('Reportes_Pendientes'),
+                'text' => 'Reportes pendientes',
+                'icon' => 'fa fa-battery-half'
+            ]
+        ],
+        'id' => 'opcionb_menu'
+    ];
+
 	$menu['Adopciones'] = [
         'is_active' => false,
         'href' => route_to("Adopciones"),
@@ -44,28 +68,6 @@ function configurar_menu_panel() {
         'id' => 'dashboard_menu'
     ];
 
-    // Opción con submenús
-    $menu['reportes'] = [
-        'is_active' => false,
-        'href' => '#',
-        'text' => 'Reportes',
-        'icon' => 'fa fa-battery-full',
-        'submenu' => [
-            [
-                'is_active' => false,
-                'href' => route_to('Reportes_pendientes'),
-                'text' => 'Reportes pendientes',
-                'icon' => 'fa fa-battery-three-quarters'
-            ],
-            [
-                'is_active' => false,
-                'href' => route_to('Reportes_Aceptados'),
-                'text' => 'Reportes aceptados',
-                'icon' => 'fa fa-battery-half'
-            ]
-        ],
-        'id' => 'opcionb_menu'
-    ];
 
     
 

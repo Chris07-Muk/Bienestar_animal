@@ -2,6 +2,7 @@
 
 namespace App\Controllers\Panel;
 
+use App\Models\Tabla_reportes; // Importar el modelo
 use App\Controllers\BaseController;
 
 class Reportes_Aceptados extends BaseController
@@ -22,16 +23,16 @@ class Reportes_Aceptados extends BaseController
         }
 
         //======================================================================
-		//==========================DATOS FUNDAMENTALES=========================
-		//======================================================================
+        //==========================DATOS FUNDAMENTALES========================
+        //======================================================================
         $data = array();
         $data['nombre_completo_usuario'] = $this->session->get('nombre_completo_usuario');
         $data['email_usuario'] = $this->session->get('email_usuario');
         $data['imagen_usuario'] = $this->session->get('imagen_usuario') ?? ($this->session->get('sexo_usuario') == 1 ? 'no-image-m.png' : 'no-image-f.png');
 
         // Datos de la página
-        $data['nombre_pagina'] = 'Dashboard';
-        $data['titulo_pagina'] = 'Dashboard';
+        $data['nombre_pagina'] = 'Reportes';
+        $data['titulo_pagina'] = 'Reportes Activos';
 
         // Cargar helper para el breadcrumb
         helper('breadcrumb');
@@ -45,8 +46,8 @@ class Reportes_Aceptados extends BaseController
             ),
             array(
                 'href' => '#',
-                'tarea' => 'Usuario nuevo',
-                'icon' => 'fa fa-user',
+                'tarea' => 'Usuarios Activos',
+                'icon' => 'fa fa-users',
             ),
         );
 
@@ -62,8 +63,20 @@ class Reportes_Aceptados extends BaseController
         return view($name_view, $content);
     }
 
+    // Método para mostrar los usuarios activos
     public function index()
     {
-        return $this->make_view($this->view, $this->load_data());
+        $usuarioModel = new Tabla_reportes(); // Instancia del modelo Tabla_usuarios
+        $data = $this->load_data(); // Cargar datos de usuario y navegación
+
+        // Obtener usuarios activos de la base de datos
+        $data['getReportesActivos'] = $usuarioModel->getReportesActivos();
+        // dd($data);
+
+        // Pasa los datos a la vista
+        return $this->make_view($this->view, $data);
     }
+
 }
+
+?>
