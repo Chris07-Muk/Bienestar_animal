@@ -54,7 +54,7 @@ $routes->get('/Contactanos', 'Portal/Contactanos::index');
 
 //Routes of Usuario
 $routes->get('/login', 'Usuario/Login::index');
-
+$routes->get('/logout', 'Usuario/Logout::index', ['as' => 'logout']);
 
 $routes->post('/validar_usuario', 'Usuario/Login::validar_usuario', ['as' => 'validar_usuario']);
 

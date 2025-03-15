@@ -98,3 +98,57 @@ define('RECURSOS_LOGIN_IMAGES', 'recursos_login/images/');
 define('RECURSOS_LOGIN_JS', 'recursos_login/js/');
 define('RECURSOS_LOGIN_VENDOR', 'recursos_login/vendor/');
 
+
+
+//=================================ESTATUS======================================
+//Habilitado/Deshabilitado
+define("ESTATUS_HABILITADO", 1);     //In JS = E_H
+define("ESTATUS_DESHABILITADO", -1); //In JS = E_D
+
+//SEXOS
+define("SEXO_FEMENINO", -1); //In JS = S_F
+define("SEXO_MASCULINO", 1); //In JS = S_M
+
+//******************************************************************************
+//**************************** TAREAS DEL USUARIO ******************************
+//******************************************************************************
+
+//LOGIN Y LOGOUT
+define("TAREA_LOGIN", "tarea_login");
+define("TAREA_LOGOUT", "tarea_logout");
+
+//TAREAS PROPIAS DEL USUARIO
+define("TAREA_USUARIO_PERFIL", "tarea_usuario_perfil");
+define("TAREA_USUARIO_PASSWORD", "tarea_usuario_password");
+
+//******************************************************************************
+//ROLES
+define("ROL_ADMIN", array('nombre' => 'Admininistrador', 'clave' => '745'));
+define("ROL_OPERADOR", array('nombre' => 'Operador', 'clave' => '125'));
+define("ROL_USUARIO", array('nombre' => 'Usuario', 'clave' => '123'));
+
+//******************************************************************************
+//***************************** PERMISOS DE LOS ROLES **************************
+//******************************************************************************
+define(
+    "PERMISOS_ADMIN",
+    array(
+
+
+        )
+    );
+
+define(
+    "PERMISOS_OPERADOR",
+    array(   
+
+        )
+    );
+    
+
+define(
+    "PERMISOS_USUARIO",
+    array(   
+
+        )
+    );

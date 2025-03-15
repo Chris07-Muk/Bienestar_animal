@@ -463,7 +463,9 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Account Setting</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <a class="dropdown-item" href="<?= route_to('logout') ?>">
+                        <i data-feather="log-out" class="feather-sm text-danger me-1 ms-1"></i> Cerrar sesión
+                        </a>
                       </li>
                     </div>
                   </ul>
