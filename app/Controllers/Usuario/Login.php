@@ -1,9 +1,5 @@
-<?php
-
-namespace App\Controllers\Usuario;
-
+<?php namespace App\Controllers\Usuario;
 use App\Controllers\BaseController;
-
 class Login extends BaseController
 {
     private $view = 'usuario/login';
