@@ -9,16 +9,16 @@
         protected $useAutoIncrement = true;
         protected $returnType = 'object';
         protected $allowedFields = [
-            'id_reporte', 'imagen', 'descripcion', 'ubi_lat',
+            'id_reporte', 'titulo_reporte', 'imagen', 'descripcion', 'ubi_lat',
             'ubi_long','estatus_apr'
         ];
 
-        public function getReporte($constraint = array())
+        public function getReportes($constraint = array())
         {
             // Ejecuta la consulta y guarda los resultados en una variable
             $reporte = $this
                             ->table($this->table)
-                            ->select('id_reporte, imagen, descripcion, ubi_lat, ubi_long, estatus_apr')
+                            ->select('id_reporte, titulo_reporte, imagen, descripcion, ubi_lat, ubi_long, estatus_apr')
                             ->findAll();
 
             
@@ -42,4 +42,20 @@
                         ->where('estatus_apr', -1)
                         ->findAll(); 
         }
+
+        //encontrar reporte por id
+        public function getReporte($id)
+        {
+            return $this
+                ->where('id_reporte', $id)
+                ->first();
+        }
+
+        public function eliminarReporte($id)
+        {
+            return $this->where('id_reporte', $id)->delete();
+        }
+
+
+
     }

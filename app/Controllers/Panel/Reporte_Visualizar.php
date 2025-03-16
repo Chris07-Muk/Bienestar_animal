@@ -5,9 +5,9 @@ namespace App\Controllers\Panel;
 use App\Models\Tabla_reportes; // Importar el modelo
 use App\Controllers\BaseController;
 
-class Reportes_Aceptados extends BaseController
+class Reporte_Visualizar extends BaseController
 {
-    private $view = 'panel/Reportes_Aceptados'; // Vista del dashboard
+    private $view = 'panel/Reporte_Visualizar'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -63,44 +63,36 @@ class Reportes_Aceptados extends BaseController
         return view($name_view, $content);
     }
 
-    // Método para mostrar los usuarios activos
-    public function index()
-    {
-        $usuarioModel = new Tabla_reportes(); // Instancia del modelo Tabla_usuarios
-        $data = $this->load_data(); // Cargar datos de usuario y navegación
 
-        // Obtener usuarios activos de la base de datos
-        $data['getReportesActivos'] = $usuarioModel->getReportesActivos();
-        // dd($data);
-
-        // Pasa los datos a la vista
-        return $this->make_view($this->view, $data);
-    }
-
-    public function eliminar($id)
+    public function vizualizar($id)
     {
         $modelo = new Tabla_reportes();
+        $data = $this->load_data();
 
-        // Verificar si el reporte existe antes de eliminar
-        $reporte = $modelo->find($id);
-        if (!$reporte) {
-            return redirect()->to('/Reportes_Aceptados')->with('error', 'Reporte no encontrado.');
+        // Obtener el reporte a editar
+        $data['reporte'] = $modelo->getReporte($id);
+
+        if ($this->request->getMethod() === 'post') {
+            $datos = [
+                'descripcion' => $this->request->getPost('descripcion'),
+                'ubi_lat' => $this->request->getPost('ubi_lat'),
+                'ubi_long' => $this->request->getPost('ubi_long'),
+                'estatus_apr' => $this->request->getPost('estatus_apr')
+            ];
+
+            // Procesamiento de imagen
+            $imagen = $this->request->getFile('imagen');
+            if ($imagen && $imagen->isValid() && !$imagen->hasMoved()) {
+                $nuevoNombre = $imagen->getRandomName();
+                $imagen->move('uploads/', $nuevoNombre);
+                $datos['imagen'] = $nuevoNombre;
+            }
+
+            return redirect()->to('/Reportes_Aceptados')->with('success', 'Reporte actualizado correctamente.');
         }
 
-        // Eliminar imagen asociada si existe
-        if (!empty($reporte->imagen)) {
-            $rutaImagen = FCPATH . 'uploads/' . $reporte->imagen;
-            if (file_exists($rutaImagen)) {
-                unlink($rutaImagen);
-            }
-        }        
-
-        // Eliminar el reporte
-        $modelo->eliminarReporte($id);
-
-        return redirect()->to('/Reportes_Aceptados')->with('success', 'Reporte eliminado correctamente.');
+        return $this->make_view('panel/Reporte_Visualizar', $data);
     }
-
 
 }
 
