@@ -43,13 +43,29 @@ $routes->get('/logout', 'Usuario/Logout::index', ['as' => 'logout']);
 //Routes of panel admin
 $routes->get('/Inicio', 'Inicio::index');
 $routes->get('/Dashboard', 'Panel/Dashboard::index');
+
+//Routes of usuarios
 $routes->get('/Usuarios', 'Panel/Usuarios::index');
 //$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
 //$routes->get('/usuarios_pendientes', 'Panel/usuarios_pendientes::index');
+$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
+$routes->get('/usuarios_pendientes', 'Panel/usuarios_pendientes::index');
+$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
+
+//Routes of reportes
 $routes->get('/Reportes_Aceptados', 'Panel/Reportes_Aceptados::index');
 $routes->get('/Reportes_Pendientes', 'Panel/Reportes_Pendientes::index');
+$routes->get('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1', ['as' => 'Reporte_Visualizar']);
+$routes->post('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1');
+
+$routes->get('/Reporte_eliminar/(:num)', 'Panel\Reportes_Aceptados::eliminar/$1', ['as' => 'eliminar_reporte']);
+
+
+
+
 $routes->get('/Adopciones', 'Panel/Adopciones::index');
 //$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
+
 
 //Routes of public
 $routes->get('/Portal', 'Portal/Portal::index' );

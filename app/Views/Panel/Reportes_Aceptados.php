@@ -6,7 +6,7 @@
 <?= $this->section('content') ?>
 
 
-<h1>Gestión de Usuarios Aceptados</h1>
+<h1>Gestión de reportes Aceptados</h1>
 
 <!-- Comprobar si hay usuarios activos -->
 <?php if (!empty($getReportesActivos) && count($getReportesActivos) > 0): ?>
@@ -14,7 +14,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>#</th>
+                <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>ubicacion</th>
                 <th>Imagen</th>
@@ -23,7 +23,8 @@
         <tbody>
             <?php foreach ($getReportesActivos as $reporte): ?>
                 <tr>
-                    <td><?= $reporte->id_reporte ?></td>
+
+                    <td><?= $reporte->titulo_reporte ?></td>
                     <td><?= $reporte->descripcion ?></td>
                     <td><?= $reporte->ubi_lat . ' ' . $reporte->ubi_long ?></td>
                     <td>
@@ -35,8 +36,13 @@
                     </td>
                     <td>
                         <!-- Aquí puedes agregar enlaces o botones para editar/eliminar usuarios -->
-                        <a href="<?= route_to('usuario_editar', $reporte->id_reporte) ?>" class="btn btn-warning">Editar</a>
-                        <a href="<?= route_to('usuario_eliminar', $reporte->id_reporte) ?>" class="btn btn-danger">Eliminar</a>
+                        <a href="<?= route_to('Reporte_Visualizar', $reporte->id_reporte) ?>" class="btn btn-secondary">Detalles</a>
+
+                        <a href="<?= route_to('eliminar_reporte', $reporte->id_reporte) ?>" class="btn btn-danger"
+                        onclick="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                        Eliminar
+                        </a>
+
                     </td>
                 </tr>
             <?php endforeach; ?>
