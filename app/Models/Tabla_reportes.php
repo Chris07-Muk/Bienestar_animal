@@ -56,6 +56,26 @@
             return $this->where('id_reporte', $id)->delete();
         }
 
+        public function activarReporte($id)
+        {
+            return $this->where('id_reporte', $id)
+                        ->set(['estatus_apr' => 1])
+                        ->update();
+        }
+
+        public function desactivarReporte($id)
+        {
+            return $this->where('id_reporte', $id)
+                        ->set(['estatus_apr' => -1])
+                        ->update();
+        }
+
+        public function agregarReporte($data)
+        {
+            $data['estatus_apr'] = -1; // Siempre guarda con estatus -1
+            return $this->insert($data);
+        }
+
 
 
     }

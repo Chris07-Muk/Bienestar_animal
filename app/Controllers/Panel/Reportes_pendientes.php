@@ -77,6 +77,64 @@ class Reportes_Pendientes extends BaseController
         return $this->make_view($this->view, $data);
     }
 
+
+    public function activar($id)
+    {
+        $reporteModel = new Tabla_reportes();
+        
+        if ($reporteModel->activarReporte($id)) {
+            return redirect()->to(route_to('Reportes_Pendientes'))->with('success', 'Reporte activado correctamente.');
+        } else {
+            return redirect()->to(route_to('Reportes_Pendientes'))->with('error', 'No se pudo activar el reporte.');
+        }
+    }
+
+
+    //eliminar
+    public function eliminar($id)
+    {
+        $modelo = new Tabla_reportes();
+
+        // Verificar si el reporte existe antes de eliminar
+        $reporte = $modelo->find($id);
+        if (!$reporte) {
+            return redirect()->to('/Reportes_Pendientes')->with('error', 'Reporte no encontrado.');
+        }
+
+        // Eliminar imagen asociada
+        if (!empty($reporte->imagen)) {
+            $rutaImagen = FCPATH . 'uploads/' . $reporte->imagen;
+            if (file_exists($rutaImagen)) {
+                unlink($rutaImagen);
+            }
+        }        
+
+        // Eliminar el reporte
+        $modelo->eliminarReporte($id);
+
+        return redirect()->to('/Reportes_Pendientes')->with('success', 'Reporte eliminado correctamente.');
+    }
+
+    public function guardar()
+    {
+        $reporteModel = new Tabla_reportes();
+
+        $data = [
+            'titulo_reporte' => $this->request->getPost('titulo_reporte'),
+            'imagen' => $this->request->getPost('imagen'),  // Si la imagen se sube, procesa antes
+            'descripcion' => $this->request->getPost('descripcion'),
+            'ubi_lat' => $this->request->getPost('ubi_lat'),
+            'ubi_long' => $this->request->getPost('ubi_long'),
+        ];
+
+        if ($reporteModel->agregarReporte($data)) {
+            return redirect()->to(route_to('Reportes_Pendientes'))->with('success', 'Reporte agregado correctamente.');
+        } else {
+            return redirect()->to(route_to('Reportes_Pendientes'))->with('error', 'Error al agregar el reporte.');
+        }
+    }
+
+
 }
 
 ?>

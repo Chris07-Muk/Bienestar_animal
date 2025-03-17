@@ -14,7 +14,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>#</th>
+                <th>Titulo</th>
                 <th>Descripcion</th>
                 <th>ubicacion</th>
                 <th>Imagen</th>
@@ -23,7 +23,7 @@
         <tbody>
             <?php foreach ($ReportesInactivos as $reporte): ?>
                 <tr>
-                    <td><?= $reporte->id_reporte ?></td>
+                    <td><?= $reporte->titulo_reporte ?></td>
                     <td><?= $reporte->descripcion ?></td>
                     <td><?= $reporte->ubi_lat . ' ' . $reporte->ubi_long ?></td>
                     <td>
@@ -34,14 +34,39 @@
                         <?php endif; ?>
                     </td>
                     <td>
-                        <!-- Aquí puedes agregar enlaces o botones para editar/eliminar usuarios -->
-                        <a href="<?= route_to('usuario_editar', $reporte->id_reporte) ?>" class="btn btn-success">Activar</a>
-                        <a href="<?= route_to('usuario_eliminar', $reporte->id_reporte) ?>" class="btn btn-danger">Eliminar</a>
+                        <!-- Botones -->
+                        <a href="<?= route_to('activar_reporte_pendiente', $reporte->id_reporte) ?>" class="btn btn-success"
+                        onclick="return confirm('¿Estás seguro de que deseas activar este reporte?');">
+                        Activar
+                        </a>
+                        
+                        <a href="<?= route_to('eliminar_reporte_pendiente', $reporte->id_reporte) ?>" class="btn btn-danger"
+                        onclick="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">
+                        Eliminar
+                        </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
     </table>
+
+
+    <form action="<?= base_url('Reporte_agregar') ?>" method="post">
+            <label>Título:</label>
+            <input type="text" name="titulo_reporte" required>
+
+            <label>Descripción:</label>
+            <textarea name="descripcion" required></textarea>
+
+            <label>Ubicación (Latitud):</label>
+            <input type="text" name="ubi_lat" required>
+
+            <label>Ubicación (Longitud):</label>
+            <input type="text" name="ubi_long" required>
+
+            <button type="submit">Guardar Reporte</button>
+        </form>
+
 
 <?php else: ?>
     <p>No hay usuarios aceptados en el sistema.</p>

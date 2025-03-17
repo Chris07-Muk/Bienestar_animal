@@ -129,6 +129,9 @@ class Usuarios_aceptados extends BaseController
     // Método para editar un usuario
     public function editar()
     {
+
+        // dd($this->request->getPost());
+
         $id_usuario = $this->request->getPost('id_usuario');
         $data = [
             'nombre_usuario' => $this->request->getPost('nombre_usuario'),

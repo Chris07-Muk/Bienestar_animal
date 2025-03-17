@@ -59,6 +59,11 @@ $routes->get('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar
 $routes->post('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1');
 
 $routes->get('/Reporte_eliminar/(:num)', 'Panel\Reportes_Aceptados::eliminar/$1', ['as' => 'eliminar_reporte']);
+$routes->get('/Reporte_eliminar/(:num)', 'Panel\Reportes_Pendientes::eliminar/$1', ['as' => 'eliminar_reporte_pendiente']);
+
+$routes->get('/Reporte_activar/(:num)', 'Panel\Reportes_Pendientes::activar/$1', ['as' => 'activar_reporte_pendiente']);
+$routes->post('/Reporte_agregar', 'Panel\Reportes_Pendientes::guardar');
+
 
 
 

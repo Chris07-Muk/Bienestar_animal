@@ -106,7 +106,7 @@ define("ESTATUS_HABILITADO", 1);     //In JS = E_H
 define("ESTATUS_DESHABILITADO", -1); //In JS = E_D
 
 //SEXOS
-define("SEXO_FEMENINO", -1); //In JS = S_F
+define("SEXO_FEMENINO", 0); //In JS = S_F
 define("SEXO_MASCULINO", 1); //In JS = S_M
 
 //******************************************************************************
