@@ -57,12 +57,13 @@
 
    <!-- Formulario para reportar mascota -->
    <div class="container">
-      <form id="reportForm" method="post" action="../../backend/PHP/Insertar_reporte.php" enctype="multipart/form-data">
+      <form id="reportForm" method="post" action="<?= route_to('generar_reporte') ?>" enctype="multipart/form-data">
          <div class="form-group">
             <br>
             <label for="foto">Foto de la mascota:</label>
             <input type="file" class="form-control" id="foto" name="imagen" accept="image/*">
          </div>
+         <input class="form-control" type="text" name="titulo_reporte" placeholder="Título">
          <div class="form-group">
             <label for="descripcion">Descripción de la mascota:</label>
             <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>

@@ -50,26 +50,8 @@
         </tbody>
     </table>
 
-
-    <form action="<?= base_url('Reporte_agregar') ?>" method="post">
-            <label>Título:</label>
-            <input type="text" name="titulo_reporte" required>
-
-            <label>Descripción:</label>
-            <textarea name="descripcion" required></textarea>
-
-            <label>Ubicación (Latitud):</label>
-            <input type="text" name="ubi_lat" required>
-
-            <label>Ubicación (Longitud):</label>
-            <input type="text" name="ubi_long" required>
-
-            <button type="submit">Guardar Reporte</button>
-        </form>
-
-
 <?php else: ?>
-    <p>No hay usuarios aceptados en el sistema.</p>
+    <p>No hay reportes pendientes en el sistema.</p>
 <?php endif; ?>
 
 <?= $this->endSection() ?>

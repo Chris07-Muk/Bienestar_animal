@@ -76,7 +76,10 @@ $routes->get('/Adopciones', 'Panel/Adopciones::index');
 $routes->get('/Portal', 'Portal/Portal::index' );
 $routes->get('/Nosotros', 'Portal/Nosotros::index');
 $routes->get('/Servicios', 'Portal/Servicios::index');
+
 $routes->get('/Reportar', 'Portal/Reportar::index');
+$routes->post('/reportar', 'Usuario\Creacion_Reportes::guardar', ['as' => 'generar_reporte']);
+
 $routes->get('/Mascotas_Perdidas', 'Portal/Mascotas_Perdidas::index');
 $routes->get('/Contactanos', 'Portal/Contactanos::index');
 
