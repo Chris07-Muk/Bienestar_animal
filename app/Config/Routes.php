@@ -110,22 +110,13 @@ $routes->get('/reportes-activos', 'Portal\ver_reportes::listarReportesActivos', 
 // =====================================
 // USUARIOS ACEPTADOS (CRUD PRINCIPAL)
 // =====================================
-$routes->get('/usuarios_aceptados', 'Panel\usuarios_aceptados::index', ['as' => 'usuarios_aceptados']);
-$routes->get('/usuarios_aceptados/obtener', 'Panel\Usuarios_aceptados::generar_datatable', ['as' => 'obtener_usuarios_aceptados']);
-$routes->post('/usuarios_aceptados/estatus', 'Panel\Usuarios_aceptados::estatus', ['as' => 'estatus_usuario']);
-$routes->post('/usuarios_aceptados/eliminar', 'Panel\Usuarios_aceptados::eliminar', ['as' => 'eliminar_usuario']);
-$routes->get('/usuarios_aceptados/nuevo', 'Panel\Usuarios_aceptados::nuevo', ['as' => 'nuevo_usuario']);
-$routes->post('/usuarios_aceptados/registrar', 'Panel\Usuarios_aceptados::registrar', ['as' => 'registrar_usuario']);
-$routes->post('/usuarios_aceptados/editar', 'Panel\Usuarios_aceptados::editar', ['as' => 'editar_usuario']);
-
-// =====================================
-// USUARIOS PENDIENTES (Aprobación)
-// =====================================
-$routes->get('/usuarios_pendientes', 'Panel\usuarios_pendientes::index', ['as' => 'usuarios_pendientes']);
-$routes->get('/usuarios_pendientes/obtener', 'Panel\Usuarios_pendientes::generar_datatable', ['as' => 'obtener_usuarios_pendientes']);
-$routes->post('/usuarios_pendientes/aprobar', 'Panel\Usuarios_pendientes::aprobar', ['as' => 'aprobar_usuario']);
-$routes->post('/usuarios_pendientes/rechazar', 'Panel\Usuarios_pendientes::rechazar', ['as' => 'rechazar_usuario']);
-
+$routes->get('administracion_usuarios', 'Panel/Usuarios::index', ['as' => 'administracion_usuarios']);
+$routes->get('usuario_nuevo', 'Panel/Usuario_nuevo::index', ['as' => 'usuario_nuevo']);
+$routes->post('registrar_usuario', 'Panel/Usuarios::registrar_usuario', ['as' => 'registrar_usuario']);
+$routes->get('/obtener_usuario/(:num)', 'Panel\Usuarios::obtener_datos_usuario/$1', ['as' => 'obtener_usuario']);
+$routes->post('editar_usuario', 'Panel\Usuarios::actualizar', ['as' => 'editar_usuario']);
+$routes->get('/estatus_usuario/(:num)/(:num)', 'Panel\Usuarios::estatus/$1/$2', ['as' => 'estatus_usuario']);
+$routes->get('eliminar_usuario/(:num)', 'Panel\Usuarios::eliminar/$1', ['as' => 'eliminar_usuario']);
 
 /*
  * --------------------------------------------------------------------

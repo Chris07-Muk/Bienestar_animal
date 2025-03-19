@@ -2,8 +2,6 @@
 <?= $this->extend("plantillas/panel_base") ?>
 
 
-
-
 <?= $this->section('content') ?>
 
 

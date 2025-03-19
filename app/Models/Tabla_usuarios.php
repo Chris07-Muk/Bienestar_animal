@@ -1,111 +1,107 @@
 <?php
-    namespace App\Models;
-    use CodeIgniter\Model;
+namespace App\Models;
+use CodeIgniter\Model;
 
-    class Tabla_usuarios extends Model
+class Tabla_usuarios extends Model
+{
+    protected $table = 'usuarios';
+    protected $primaryKey = 'id_usuario';
+    protected $returnType = 'object';
+    protected $allowedFields = [
+        'estatus_usuario',
+        'id_usuario',
+        'nombre_usuario',
+        'ap_usuario',
+        'am_usuario',
+        'sexo_usuario',
+        'email_usuario',
+        'password_usuario',
+        'imagen_usuario',
+        'id_rol'
+    ];
+
+    //============================
+    // Consultas epecificas o básicas
+    // Create Read Update Delete
+    //============================
+    public function create_data($data = array())
     {
-        protected $table = 'usuarios';
-        protected $primaryKey = 'id_usuario';
-        protected $useAutoIncrement = true;
-        protected $returnType = 'object';
-        protected $allowedFields = [
-            'id_usuario', 'estatus_usuario', 'nombre_usuario', 'ap_usuario',
-            'am_usuario', 'sexo_usuario', 'email_usuario', 'password_usuario',
-            'imagen_usuario', 'id_rol'
-        ];
-
-        public function createUsuario ($data = array()){
-        if ($data != null){
-            $id = $this
-                    ->table($this->table)
-                    ->insert($data);
-            return ($id) ? $id : false; 
-
-        }//end if
-        return false;
-        }//end createUsuario
-
-        public function getUsuario($constraint = array()){
-        return $this
-            ->select('id_usuario, estatus_usuario, nombre_usuario, ap_usuario, am_usuario, sexo_usuario, email_usuario, password_usuario, imagen_usuario, id_rol')
-            ->where($constraint)
-            ->first();
-        }//end getUsuario
-
-        public function getUsuarios()
-        {
-            // Ejecuta la consulta y guarda los resultados en una variable
-            $usuarios = $this
-                            ->table($this->table)
-                            ->select('id_usuario, estatus_usuario, nombre_usuario, ap_usuario, am_usuario, sexo_usuario, email_usuario, imagen_usuario, id_rol')
-                            ->findAll();
-
-            
-            // dd($usuarios);
-
-            return $usuarios; // Devuelve los resultados
-        }
-
-        
-        public function getUsuariosActivos()
-        {
-            // Devuelve todos los usuarios con estatus 1
-            return $this->table($this->table) 
-                        ->where('estatus_usuario', 1)
-                        ->findAll(); 
-        }
-
-        public function getUsuariosInactivos()
-        {
-            // Filtra por estatus inactivo (-1)
-            return $this->table($this->table)
-                        ->where('estatus_usuario', -1)
-                        ->findAll(); 
-        }
-
-
-
-
-
-        public function updateUsuario($id = 0, $data = array()){
-            if ($data != null){
-                return $this
-                        ->table($this->table)
-                        ->set($data)
-                        ->where([$this->primaryKey => $id]);
-            }//end if
-            return false;
-        }//end updateUsuario
-
-        public function deleteUsuario($id = 0){
-            if ($this->table($this->table)->find($id) != null){
-                return $this
-                        ->table($this->table)
-                        ->delete([$this->primaryKey => $id]);
-            }//end if
-            return -1;
-        }//end deleteUsuario
-
-
-        public function loginUsuario($email = '', $password = '')
-        {
+        if (!empty($data)) {
             return $this
-                ->select("usuarios.id_usuario, 
-                        usuarios.nombre_usuario, 
-                        usuarios.ap_usuario, 
-                        usuarios.am_usuario, 
-                        usuarios.estatus_usuario, 
-                        usuarios.sexo_usuario, 
-                        usuarios.email_usuario, 
-                        usuarios.imagen_usuario, 
-                        usuarios.id_rol, 
-                        roles.rol AS rol")
-                ->join('roles', 'usuarios.id_rol = roles.id_rol')
-                ->where('usuarios.email_usuario', $email)
-                ->where('usuarios.password_usuario', $password)
-                ->first();
-        }//end loginUsuario
+                ->table($this->table)
+                ->insert($data);
+        }//end if 
+        else {
+            return FALSE;
+        }//end else
+    }//end create_data
 
-    }// end Tabla_usuarios
+    public function get_user($contraints = array())
+    {
+        return $this
+            ->table($this->table)
+            ->where($contraints)
+            ->get()
+            ->getRow();
+    }//get_user
 
-?>
+    public function get_table()
+    {
+        return $this
+            ->table($this->table)
+            ->get()
+            ->getResult();
+    }//get_table
+
+    public function update_data($id = 0, $data = array())
+    {
+        if (!empty($data)) {
+            return $this
+                ->table($this->table)
+                ->where([$this->primaryKey => $id])
+                ->set($data)
+                ->update();
+        }//end if
+        else {
+            return FALSE;
+        }//end else
+    }//update_data
+
+
+    public function delete_data($id_usuario = 0)
+    {
+        return $this->db
+            ->table($this->table)
+            ->where([$this->primaryKey => $id_usuario])
+            ->delete();
+    }//end delete_data
+
+    ///Specifc Queries
+    public function iniciar_sesion($email = "", $password = "")
+{
+    if ($email != NULL && $password != NULL) {
+        return $this
+            ->table($this->table)
+            ->select("
+                usuarios.id_usuario, 
+                estatus_usuario, 
+                usuarios.nombre_usuario, 
+                usuarios.ap_usuario, 
+                usuarios.am_usuario,
+                CONCAT(usuarios.nombre_usuario, ' ', usuarios.ap_usuario, ' ', usuarios.am_usuario) AS nombre_completo,
+                usuarios.sexo_usuario, 
+                usuarios.email_usuario,
+                usuarios.imagen_usuario, 
+                roles.id_rol, 
+                roles.rol")
+            ->join("roles", "usuarios.id_rol = roles.id_rol")
+            ->where("usuarios.email_usuario", $email)
+            ->where("usuarios.password_usuario", $password)
+            ->first();
+    } else {
+        return array();
+    }
+}
+
+
+}//end Tabla_usuarios

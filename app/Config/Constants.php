@@ -99,56 +99,80 @@ define('RECURSOS_LOGIN_JS', 'recursos_login/js/');
 define('RECURSOS_LOGIN_VENDOR', 'recursos_login/vendor/');
 
 
+//Constantes para imagenes
+define('IMG_USUARIOS', 'images/usuarios');
+
+define('IMG_DIR_ICONS', 'images/icons');
 
 //=================================ESTATUS======================================
 //Habilitado/Deshabilitado
-define("ESTATUS_HABILITADO", 1);     //In JS = E_H
-define("ESTATUS_DESHABILITADO", -1); //In JS = E_D
+define("ESTATUS_HABILITADO", 1);   
+define("ESTATUS_DESHABILITADO", 0); 
 
 //SEXOS
-define("SEXO_FEMENINO", 0); //In JS = S_F
-define("SEXO_MASCULINO", 1); //In JS = S_M
+define("FEMENINO", 0);
+define("MASCULINO", 1);
 
-//******************************************************************************
-//**************************** TAREAS DEL USUARIO ******************************
-//******************************************************************************
+
+
+//==============================================================================
+//============================= ALERTAS ========================================
+//CONSTANTES ALERTAS
+define('TOASTR_SUCCESS', 50);
+define('TOASTR_WARNING', 100);
+define('TOASTR_DANGER', 125);
+define('TOASTR_INFO', 0);
+
+
+//**************************
+//********** TAREAS DEL USUARIO **********
+//**************************
+
+
+define('TAREA_DASHBOARD', "tarea_dashboard");
+
+define('TAREA_USUARIOS', "tarea_usuarios");
+
+define('TAREA_REPORTES', "tarea_reportes");
+
+define('TAREA_ADOPCIONES', "tarea_adopciones");
 
 //LOGIN Y LOGOUT
 define("TAREA_LOGIN", "tarea_login");
 define("TAREA_LOGOUT", "tarea_logout");
 
-//TAREAS PROPIAS DEL USUARIO
-define("TAREA_USUARIO_PERFIL", "tarea_usuario_perfil");
-define("TAREA_USUARIO_PASSWORD", "tarea_usuario_password");
 
-//******************************************************************************
-//ROLES
-define("ROL_ADMIN", array('nombre' => 'Admininistrador', 'clave' => '745'));
-define("ROL_OPERADOR", array('nombre' => 'Operador', 'clave' => '125'));
-define("ROL_USUARIO", array('nombre' => 'Usuario', 'clave' => '123'));
+//**************************
+/////////////////////////////////////ROLES///////////////////////////////////////
+//**************************
+define("ROL_ADMINISTRADOR", array("clave" => 745, "rol" => "Administrador"));
 
-//******************************************************************************
-//***************************** PERMISOS DE LOS ROLES **************************
-//******************************************************************************
-define(
-    "PERMISOS_ADMIN",
-    array(
+define("ROL_OPERADOR", array("clave" => 125, "rol" => "Operador"));
+
+define("ROL_USUARIO", array("clave" => 0, "rol" => "Usuario"));
+
+define("ROLES", array(
+    ROL_ADMINISTRADOR["clave"] => ROL_ADMINISTRADOR["rol"],
+    ROL_OPERADOR["clave"] => ROL_OPERADOR["rol"],
+    ROL_USUARIO["clave"] => ROL_USUARIO["rol"]
+));
 
 
-        )
-    );
 
-define(
-    "PERMISOS_OPERADOR",
-    array(   
+//**************************
+//********** PERMISOS DE LOS ROLES *********
+//**************************
+define("PERMISOS_ADMINISTRADOR", array(
+    TAREA_DASHBOARD,
+    TAREA_USUARIOS,
+    TAREA_REPORTES,
+    TAREA_ADOPCIONES
+));
 
-        )
-    );
-    
+define("PERMISOS_OPERADOR", array(
+    TAREA_DASHBOARD,
+    TAREA_REPORTES,
+    TAREA_ADOPCIONES,
+    TAREA_USUARIOS
 
-define(
-    "PERMISOS_USUARIO",
-    array(   
-
-        )
-    );
+));

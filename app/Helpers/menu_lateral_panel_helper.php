@@ -21,7 +21,7 @@ function configurar_menu_panel() {
         'submenu' => [
             [
                 'is_active' => false,
-                'href' => route_to('usuarios_aceptados'),
+                'href' => route_to('Usuarios'),
                 'text' => 'Usuarios aceptados',
                 'icon' => 'fa fa-battery-three-quarters'
             ],

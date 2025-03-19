@@ -1,13 +1,23 @@
-<?php namespace App\Controllers\Usuario;
+<?php
+
+namespace App\Controllers\Usuario;
+
 use App\Controllers\BaseController;
+class Logout extends BaseController
+{
+    private $session = NULL;
 
-class Logout extends BaseController{
-
-	public function index(){
-		$nombre = session()->nombre_perfil;
-		session()->destroy();
-        session()->setFlashdata('mensaje', '¡Hasta luego, ' . $nombre . '!');
-		return redirect()->to(route_to('login'));
-	}//end index
-
-}//End Class Logout
+    public function __construct()
+    {
+        $this->session = session();
+    }
+    public function index()
+    {
+        if (isset($this->session) && $this->session->get('sesion_iniciada') == TRUE) {
+            $this->session->destroy();
+            unset($this->session);
+        }
+        $this->session = NULL;
+        return redirect()->to(route_to('login'));
+    }
+}
