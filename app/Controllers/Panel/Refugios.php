@@ -2,13 +2,12 @@
 
 namespace App\Controllers\Panel;
 
+use App\Models\Tabla_refugios; // Importar el modelo
 use App\Controllers\BaseController;
-use App\Models\Tabla_adopciones; // Importar el modelo
-use App\Models\Tabla_refugios; // Importar el modelo 
 
-class Adopciones extends BaseController
+class Refugios extends BaseController
 {
-    private $view = 'panel/Adopciones'; // Vista del dashboard
+    private $view = 'panel/Refugios'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -24,16 +23,16 @@ class Adopciones extends BaseController
         }
 
         //======================================================================
-		//==========================DATOS FUNDAMENTALES=========================
-		//======================================================================
+        //==========================DATOS FUNDAMENTALES========================
+        //======================================================================
         $data = array();
         $data['nombre_completo_usuario'] = $this->session->get('nombre_completo_usuario');
         $data['email_usuario'] = $this->session->get('email_usuario');
         $data['imagen_usuario'] = $this->session->get('imagen_usuario') ?? ($this->session->get('sexo_usuario') == 1 ? 'no-image-m.png' : 'no-image-f.png');
 
         // Datos de la página
-        $data['nombre_pagina'] = 'Adopciones';
-        $data['titulo_pagina'] = 'Adopciones';
+        $data['nombre_pagina'] = 'Refugios';
+        $data['titulo_pagina'] = 'Refugios';
 
         // Cargar helper para el breadcrumb
         helper('breadcrumb');
@@ -47,8 +46,8 @@ class Adopciones extends BaseController
             ),
             array(
                 'href' => '#',
-                'tarea' => 'Usuario nuevo',
-                'icon' => 'fa fa-user',
+                'tarea' => 'Usuarios Activos',
+                'icon' => 'fa fa-users',
             ),
         );
 
@@ -64,62 +63,56 @@ class Adopciones extends BaseController
         return view($name_view, $content);
     }
 
+
     public function index()
     {
-        $adopcionModel = new Tabla_adopciones(); // Creamos una instancia del modelo de adopciones
-        $data['adopciones'] = $adopcionModel->getAdopciones(); // Obtenemos las adopciones
+        $refugioModel = new Tabla_refugios(); // Instancia del modelo Tabla_usuarios
+        $data = $this->load_data(); // Cargar datos de usuario y navegación
 
-        $refugioModel = new Tabla_refugios();
+        // Obtener usuarios activos de la base de datos
         $data['refugios'] = $refugioModel->getRefugio();
-
         // dd($data);
 
+        // Pasa los datos a la vista
         return $this->make_view($this->view, $data);
     }
 
     public function agregar()
     {
-        $refugioModel = new Tabla_refugios();
-        $data['refugios'] = $refugioModel->getRefugio(); // Obtener los refugios disponibles
-
-
-        return $this->make_view('Panel/agregar_adopcion', $data); // Vista de formulario para agregar
+        $data = $this->load_data(); // Cargar datos de usuario y navegación
+        return $this->make_view('Panel/agregar_refugio', $data); // Vista de formulario para agregar
     }
 
-
+    // Guardar el nuevo refugio en la base de datos
     public function guardar()
     {
-        if ($this->request->getMethod() === 'post') {
-            $adopcionModel = new Tabla_adopciones();
+        $refugioModel = new Tabla_refugios(); // Instancia del modelo
 
         // Capturar los datos del formulario
         $data = [
-            'id_refugio' => $this->request->getPost('id_refugio'),
-            'tipo' => $this->request->getPost('tipo'),
-            'descripcion_adopcion' => $this->request->getPost('descripcion_adopcion'),
-            'img_adopcion' => $this->request->getPost('img_adopcion'),
+            'nombre_refugio' => $this->request->getPost('nombre_refugio'),
+            'direccion' => $this->request->getPost('direccion'),
+            'capacidad' => $this->request->getPost('capacidad'),
         ];
 
         // Insertar el nuevo refugio en la base de datos
-        if ($adopcionModel->insert($data)) {
-            return redirect()->to(route_to('Adopciones'))->with('success', 'Refugio agregado correctamente.');
+        if ($refugioModel->agregarRefugio($data)) {
+            return redirect()->to(route_to('Refugios'))->with('success', 'Refugio agregado correctamente.');
         } else {
-            return redirect()->to(route_to('Adopciones'))->with('error', 'Hubo un problema al agregar el refugio.');
-        }
-
+            return redirect()->to(route_to('Refugios'))->with('error', 'Hubo un problema al agregar el refugio.');
         }
     }
 
-    public function eliminar($id_adopcion)
+    public function eliminar($id_refugio)
     {
-        $adopcionModel = new Tabla_adopciones();
-        
-        if ($adopcionModel->eliminarAdopcion($id_adopcion)) {
-            return redirect()->to(route_to('Adopciones'))->with('success', 'Refugio eliminado correctamente.');
+        $refugioModel = new Tabla_refugios(); // Instancia del modelo
+
+        // Llamar a la función eliminarRefugio
+        if ($refugioModel->eliminarRefugio($id_refugio)) {
+            return redirect()->to(route_to('Refugios'))->with('success', 'Refugio eliminado correctamente.');
         } else {
-            return redirect()->to(route_to('Adopciones'))->with('error', 'No se pudo eliminar el refugio.');
+            return redirect()->to(route_to('Refugios'))->with('error', 'No se pudo eliminar el refugio.');
         }
     }
-
 
 }

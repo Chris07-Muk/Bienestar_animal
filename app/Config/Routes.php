@@ -65,10 +65,27 @@ $routes->get('/Reporte_activar/(:num)', 'Panel\Reportes_Pendientes::activar/$1',
 $routes->post('/Reporte_agregar', 'Panel\Reportes_Pendientes::guardar');
 
 
+// Routes of refugios
+$routes->get('/Refugios', 'Panel/Refugios::index');
+$routes->post('/Refugios_eliminar/(:num)', 'Panel\Refugios::eliminar/$1', ['as' => 'eliminar_refugio']);
+$routes->get('/Refugios_agregar', 'Panel\Refugios::agregar', ['as' => 'agregar_refugio']); // Ruta para mostrar el formulario
+$routes->post('/Refugios_agregar', 'Panel\Refugios::guardar', ['as' => 'guardar_refugio']); // Ruta para procesar el formulario
+
+
+// Ruta para ver las adopciones
+$routes->get('/Adopciones', 'Panel\Adopciones::index');
+
+// Ruta para agregar una adopción
+$routes->get('/Adopciones_agregar', 'Panel\Adopciones::agregar', ['as' => 'agregar_adopcion']);
+$routes->post('/Adopciones_agregar', 'Panel\Adopciones::guardar', ['as' => 'guardar_adopcion']);
+
+// Ruta para eliminar una adopción
+$routes->post('/Adopciones_eliminar/(:num)', 'Panel\Adopciones::eliminar/$1', ['as' => 'eliminar_adopcion']);
 
 
 
-$routes->get('/Adopciones', 'Panel/Adopciones::index');
+
+// $routes->get('/Adopciones', 'Panel/Adopciones::index');
 //$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
 
 

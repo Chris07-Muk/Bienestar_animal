@@ -68,6 +68,15 @@ function configurar_menu_panel() {
         'id' => 'dashboard_menu'
     ];
 
+    $menu['Refugios'] = [
+        'is_active' => false,
+        'href' => route_to("Refugios"),
+        'text' => 'Refugios',
+        'icon' => 'fa fa-area-chart',
+        'submenu' => [],
+        'id' => 'dashboard_menu'
+    ];
+
 
     
 
