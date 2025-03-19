@@ -64,7 +64,7 @@
                      ["href" => route_to('Nosotros'), "tarea" => "Nosotros"],
                      ["href" => route_to('Servicios'), "tarea" => "Nuestros servicios"],
                      ["href" => route_to('Reportar'), "tarea" => "Reportar mascota"],
-                     ["href" => route_to('Mascotas_Perdidas'), "tarea" => "Mascotas perdidas"],
+                     ["href" => route_to('reportes_activos'), "tarea" => "Mascotas perdidas"],
                      ["href" => route_to('Contactanos'), "tarea" => "Contáctanos"]
                   ]); ?>
                   </div>
