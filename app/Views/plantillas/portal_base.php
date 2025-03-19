@@ -65,7 +65,8 @@
                      ["href" => route_to('Servicios'), "tarea" => "Nuestros servicios"],
                      ["href" => route_to('Reportar'), "tarea" => "Reportar mascota"],
                      ["href" => route_to('reportes_activos'), "tarea" => "Mascotas perdidas"],
-                     ["href" => route_to('Contactanos'), "tarea" => "Contáctanos"]
+                     ["href" => route_to('Adoptar'), "tarea" => "Adoptar"],
+                     ["href" => route_to('login'), "tarea" => "Login"]
                   ]); ?>
                   </div>
                </div>

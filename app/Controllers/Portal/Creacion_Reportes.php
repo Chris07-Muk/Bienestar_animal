@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers\Usuario;
+namespace App\Controllers\Portal;
 
 use App\Models\Tabla_reportes; // Importar el modelo
 use App\Controllers\BaseController;
 
 class Creacion_Reportes extends BaseController{
 
-    private $view = 'portal/Reportar';
+    private $view = 'Portal/Creacion_Reporte';
 
 
     public function guardar()

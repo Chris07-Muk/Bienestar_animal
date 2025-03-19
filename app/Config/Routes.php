@@ -95,13 +95,15 @@ $routes->get('/Nosotros', 'Portal/Nosotros::index');
 $routes->get('/Servicios', 'Portal/Servicios::index');
 
 $routes->get('/Reportar', 'Portal/Reportar::index');
-$routes->post('/reportar', 'Usuario\Creacion_Reportes::guardar', ['as' => 'generar_reporte']);
+$routes->post('/reportar', 'Portal\Creacion_Reportes::guardar', ['as' => 'generar_reporte']);
+
+$routes->get('/Adoptar', 'Portal/Adoptar::index');
 
 
 $routes->get('/Contactanos', 'Portal/Contactanos::index');
 
 // $routes->get('/Mascotas_Perdidas', 'Portal/Mascotas_Perdidas::index');
-$routes->get('/reportes-activos', 'Usuario\ver_reportes::listarReportesActivos', ['as' => 'reportes_activos']);
+$routes->get('/reportes-activos', 'Portal\ver_reportes::listarReportesActivos', ['as' => 'reportes_activos']);
 
 
 

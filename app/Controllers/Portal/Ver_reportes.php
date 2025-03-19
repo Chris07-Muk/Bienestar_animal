@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Controllers\Usuario;
+namespace App\Controllers\Portal;
 
 use App\Models\Tabla_reportes; // Importar el modelo
 use App\Controllers\BaseController;
 
 class Ver_reportes extends BaseController{
 
-    private $view = 'usuario/mascotas_perdidas';
+    private $view = 'Portal/mascotas_perdidas';
 
     private function load_data()
     {
