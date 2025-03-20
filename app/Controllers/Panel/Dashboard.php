@@ -11,6 +11,8 @@ class Dashboard extends BaseController
 
     public function __construct()
     {
+        helper('funciones_globales');
+        // Inicializar la sesión
         $this->session = session(); // Inicializar la sesión
     }
 

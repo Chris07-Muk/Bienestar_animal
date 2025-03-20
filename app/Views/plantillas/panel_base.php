@@ -43,6 +43,12 @@
 
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link rel="stylesheet" href="<?=base_url(RECURSOS_PANEL_CSS.'demo.css')?>">
+
+    
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+
     <?=$this->renderSection('css')?>
   </head>
   <body>
@@ -760,6 +766,11 @@
     <script src="<?=base_url(RECURSOS_PANEL_JS.'demo.js') ?>"></script>
 
     <?=$this->renderSection('js')?>
+
+
+    <!-- Toastr JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <script>
       $("#lineChart").sparkline([102, 109, 120, 99, 110, 105, 115], {
         type: "line",
@@ -787,6 +798,16 @@
         lineColor: "#ffa534",
         fillColor: "rgba(255, 165, 52, .14)",
       });
+
+      /**
+         * INFO:ALERTA EN COLOR AZUL
+         * SUCCES:ALERTA EN COLOR VERDE
+         * ERROR:ALERTA EN ROJO
+         * WARNING:ALERTA EN AMARILLO
+         */
+        // toastr.info('Muestra la alerta si esta funcionando', 'Titulo')
+        <?= mostrar_mensaje() ?>
+
     </script>
   </body>
 </html>

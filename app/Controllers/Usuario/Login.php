@@ -4,6 +4,14 @@ class Login extends BaseController
 {
      // Atributo específico
     private $view = 'usuario/login';
+    private $session = NULL;
+
+    public function __construct()
+    {
+        helper('funciones_globales');
+        // Inicializar la sesión
+        $this->session = session(); // Inicializar la sesión
+    }
 
     private function cargar_datos(){
         $data = array();
@@ -37,26 +45,25 @@ class Login extends BaseController
         if (!empty($usuario)) {
 
         if ($usuario->estatus_usuario == ESTATUS_DESHABILITADO) {
-            //crear_mensaje("Este usuario ha sido deshabilitado. Comunícate con el administrador", "Error", TOASTR_WARNING);
+            crear_mensaje("Este usuario ha sido deshabilitado. Comunícate con el administrador", "Error", TOASTR_WARNING);
             return redirect()->to(route_to("login"));
         } //end estatus_deshabilitado
 
-        $session = session();
-        $session->set("sesion_iniciada", TRUE);
-        $session->set("id_usuario", $usuario->id_usuario);
-        $session->set("usuario", $usuario->nombre_usuario);
-        $session->set("nombre_completo_usuario", trim($usuario->nombre_usuario . ' ' . $usuario->ap_usuario . ' ' . $usuario->am_usuario));
-        $session->set("sexo_usuario", $usuario->sexo_usuario);
-        $session->set("email_usuario", $usuario->email_usuario);
-        $session->set("imagen_usuario", $usuario->imagen_usuario);
-        $session->set("rol_actual", $usuario->id_rol);
-        $session->set("tarea_actual", TAREA_DASHBOARD);
+        $this->session->set("sesion_iniciada", TRUE);
+        $this->session->set("id_usuario", $usuario->id_usuario);
+        $this->session->set("usuario", $usuario->nombre_usuario);
+        $this->session->set("nombre_completo_usuario", trim($usuario->nombre_usuario . ' ' . $usuario->ap_usuario . ' ' . $usuario->am_usuario));
+        $this->session->set("sexo_usuario", $usuario->sexo_usuario);
+        $this->session->set("email_usuario", $usuario->email_usuario);
+        $this->session->set("imagen_usuario", $usuario->imagen_usuario);
+        $this->session->set("rol_actual", $usuario->id_rol);
+        $this->session->set("tarea_actual", TAREA_DASHBOARD);
 
-        //crear_mensaje("Hola de nuevo " . $session->get("Usuarios_aceptados") . " al panel de administración", "¡Bienvenido!", TOASTR_INFO);
+        crear_mensaje("Hola de nuevo " . $this->session->get("Usuarios_aceptados") . " al panel de administración", "¡Bienvenido!", TOASTR_INFO);
         return redirect()->to(route_to("Dashboard"));
     } //end if
     else {
-        //crear_mensaje("El usuario y/o contraseña son incorrectas", "Error", TOASTR_DANGER);
+        crear_mensaje("El usuario y/o contraseña son incorrectas", "Error", TOASTR_DANGER);
         return redirect()->to(route_to("login"));
     } //end else
 }
