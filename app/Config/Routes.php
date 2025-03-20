@@ -35,7 +35,16 @@ $routes->setAutoRoute(true);
 //$routes->get('/', 'Home::index');
 
 //Routes of login
+//Login
+//Login
+
+//$routes->get('/', 'Usuario\Login::index', ['as' =>'login']);
+
+$routes->get('/', 'Portal\Portal::index', ['as' => 'portal']);
+
+
 $routes->get('/login', 'Usuario/Login::index');
+$routes->get('/registro', 'Usuario/Registro::index');
 $routes->post('/validar_usuario', 'Usuario/Login::validar_usuario', ['as' => 'validar_usuario']);
 $routes->get('/logout', 'Usuario/Logout::index', ['as' => 'logout']);
 

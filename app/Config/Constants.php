@@ -149,7 +149,7 @@ define("ROL_ADMINISTRADOR", array("clave" => 745, "rol" => "Administrador"));
 
 define("ROL_OPERADOR", array("clave" => 125, "rol" => "Operador"));
 
-define("ROL_USUARIO", array("clave" => 0, "rol" => "Usuario"));
+define("ROL_USUARIO", array("clave" => 10, "rol" => "Usuario"));
 
 define("ROLES", array(
     ROL_ADMINISTRADOR["clave"] => ROL_ADMINISTRADOR["rol"],

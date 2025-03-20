@@ -60,9 +60,9 @@
 						</div>
 
 						<div>
-							<a href="#" class="txt1">
-								Olvidaste tu contraseña?
-							</a>
+    					<span class="txt2">
+        				¿No tienes una cuenta? <a href="<?= base_url('registro') ?>">Regístrate aquí</a>
+    					</span>
 						</div>
 					</div>
 			
@@ -75,18 +75,8 @@
 					
 					<div class="text-center p-t-46 p-b-20">
 						<span class="txt2">
-							Inicia sesión con tus redes sociales
+							Inicia sesión
 						</span>
-					</div>
-
-					<div class="login100-form-social flex-c-m">
-						<a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
-							<i class="fa fa-facebook-f" aria-hidden="true"></i>
-						</a>
-
-						<a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
-							<i class="fa fa-twitter" aria-hidden="true"></i>
-						</a>
 					</div>
 
 					<?= form_close() ?>

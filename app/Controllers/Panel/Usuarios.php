@@ -14,6 +14,8 @@ class Usuarios extends BaseController
         // Iniciar sesión
         $this->session = session();
 
+        helper('funciones_globales');
+
 
         // Cargar el helper de permisos
         helper("permisos_roles_helper");
@@ -88,7 +90,7 @@ class Usuarios extends BaseController
             return $this->crear_vista($this->view, $this->cargar_datos());
         }//end if
         else {
-            //crear_mensaje("No tienes permisos para acceder a este módulo, contancte al Administrador", "Oppss!", TOASTR_WARNING);
+            crear_mensaje("No tienes permisos para acceder a este módulo, contancte al Administrador", "Oppss!", TOASTR_WARNING);
             return redirect()->to(route_to("login"));
         }//
 
@@ -116,10 +118,10 @@ class Usuarios extends BaseController
         // dd($usuario);
         $tabla_usuarios = new \App\Models\Tabla_usuarios();
         if ($tabla_usuarios->create_data($usuario) > 0) {
-            //crear_mensaje("El usuario ha sido registrada de manera exitosa", "¡Petición exitosa!", TOASTR_SUCCESS);
+            crear_mensaje("El usuario ha sido registrada de manera exitosa", "¡Petición exitosa!", TOASTR_SUCCESS);
             return redirect()->to(route_to("administracion_usuarios"));
         } else {
-            //crear_mensaje("Hubo un error al registrar el usuario", "¡Error interno!", TOASTR_DANGER);
+            crear_mensaje("Hubo un error al registrar el usuario", "¡Error interno!", TOASTR_DANGER);
             return redirect()->to(route_to("administracion_usuarios"));
         }
     }
@@ -133,14 +135,14 @@ class Usuarios extends BaseController
             //    UPDATE Usuario
             //---------------------
             if ($tabla_usuarios->update_data($id_usuario, ["estatus_usuario" => $estatus])) {
-                //crear_mensaje("El estatus del usuario ha sido actualizado", "¡Estatus actualizado!", TOASTR_SUCCESS);
+                crear_mensaje("El estatus del usuario ha sido actualizado", "¡Estatus actualizado!", TOASTR_SUCCESS);
             }//ende if
             else {
-                //crear_mensaje("Ocurrio un error al actualizar el estatus del usuario", "¡Error al Actualizar!", TOASTR_DANGER);
+                crear_mensaje("Ocurrio un error al actualizar el estatus del usuario", "¡Error al Actualizar!", TOASTR_DANGER);
             }//end else
         }//end if
         else {
-            //crear_mensaje("El usuario no ha sido encontrado", "¡Oppss!", TOASTR_WARNING);
+            crear_mensaje("El usuario no ha sido encontrado", "¡Oppss!", TOASTR_WARNING);
         }//end else
         return redirect()->to(route_to("administracion_usuarios"));
     }//end estatus
@@ -155,14 +157,14 @@ class Usuarios extends BaseController
 
         if ($tabla_usuarios->find($id_usuario) != null) {
             if ($tabla_usuarios->delete_data($id_usuario)) {
-                //crear_mensaje("El usuario ha sido eliminado de manera correcta", "¡Usuario eliminado!", TOASTR_SUCCESS);
+                crear_mensaje("El usuario ha sido eliminado de manera correcta", "¡Usuario eliminado!", TOASTR_SUCCESS);
             }//end if
             else {
-                //crear_mensaje("Error al eliminar este usuario", "¡Error al eliminar!!", TOASTR_DANGER);
+                crear_mensaje("Error al eliminar este usuario", "¡Error al eliminar!!", TOASTR_DANGER);
             }//end else
         }//end if
         else {
-            //crear_mensaje("El usuario que solicitas no se encuentra en la BD", "Oppss!", TOASTR_WARNING);
+            crear_mensaje("El usuario que solicitas no se encuentra en la BD", "Oppss!", TOASTR_WARNING);
         }//end else
         return redirect()->to(route_to("administracion_usuarios"));
     }//end eliminar
@@ -204,19 +206,19 @@ class Usuarios extends BaseController
             //    UPDATE 
             //---------------------
             if ($tabla_usuarios->update_data($id_usuario, $usuario)) {
-                //crear_mensaje("El usuario ha sido actualizado", "¡Actualización éxitosa!", TOASTR_SUCCESS);
+                crear_mensaje("El usuario ha sido actualizado", "¡Actualización éxitosa!", TOASTR_SUCCESS);
                 return $this->response->setJSON(['error' => 0]);
                 // return $this->index();
             }//ende if
             else {
-                //crear_mensaje("Ocurrio un error al procesar la información al actualizar", "¡Error al Actualizar!", TOASTR_WARNING);
+                crear_mensaje("Ocurrio un error al procesar la información al actualizar", "¡Error al Actualizar!", TOASTR_WARNING);
                 return $this->response->setJSON(['error' => -1]);
                 // return $this->index();
             }//end else
 
         }//end if
         else {
-            //crear_mensaje("El usuario que solicitas actualizar no se encuentra en la BD", "Oppss!", TOASTR_WARNING);
+            crear_mensaje("El usuario que solicitas actualizar no se encuentra en la BD", "Oppss!", TOASTR_WARNING);
             return $this->index();
         }//end else
     }//end actualizar
