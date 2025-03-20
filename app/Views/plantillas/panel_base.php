@@ -799,15 +799,6 @@
         fillColor: "rgba(255, 165, 52, .14)",
       });
 
-      /**
-         * INFO:ALERTA EN COLOR AZUL
-         * SUCCES:ALERTA EN COLOR VERDE
-         * ERROR:ALERTA EN ROJO
-         * WARNING:ALERTA EN AMARILLO
-         */
-        // toastr.info('Muestra la alerta si esta funcionando', 'Titulo')
-        <?= mostrar_mensaje() ?>
-
     </script>
   </body>
 </html>
