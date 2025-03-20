@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Kaiadmin - Bootstrap 5 Admin Dashboard</title>
+    <title>Administración | Bienestar Animal Tlaxcala</title>
     <meta
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
       name="viewport"
     />
     <link
       rel="icon"
-      href="<?=base_url(RECURSOS_PANEL_IMG.'kaiadmin/favicon.ico') ?>"
+      href="<?=base_url(RECURSOS_PANEL_IMG.'kaiadmin/logo.png') ?>"
       type="image/x-icon"
     />
 

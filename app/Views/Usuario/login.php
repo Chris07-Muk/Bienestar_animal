@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="<?=base_url(RECURSOS_LOGIN_IMAGES.'icons/favicon.ico') ?>"/>
+	<link rel="icon" type="image/png" href="<?=base_url(RECURSOS_LOGIN_IMAGES.'icons/logo.png') ?>"/>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="<?=base_url(RECURSOS_LOGIN_VENDOR.'bootstrap/css/bootstrap.min.css') ?>">
 	<!-- Font Awesome -->

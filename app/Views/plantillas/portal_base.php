@@ -21,7 +21,7 @@
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="<?=base_url(RECURSOS_PORTAL_CSS.'responsive.css') ?>">
     <!-- Favicon -->
-    <link rel="icon" href="<?=base_url(RECURSOS_PORTAL_IMAGES.'fevicon.png') ?>" type="image/gif" />
+    <link rel="icon" href="<?=base_url(RECURSOS_PORTAL_IMAGES.'logo.png') ?>" type="image/gif" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="<?=base_url(RECURSOS_PORTAL_CSS.'jquery.mCustomScrollbar.min.css') ?>">
     <!-- Tweaks for older IEs -->
