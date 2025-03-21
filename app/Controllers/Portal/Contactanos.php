@@ -5,7 +5,7 @@ namespace App\Controllers\Portal;
 use App\Controllers\BaseController;
 class Contactanos extends BaseController
 {
-    private $view = 'portal/Contactanos';
+    private $view = 'portal/contactanos';
 
     private function load_data(){
         $data = array();

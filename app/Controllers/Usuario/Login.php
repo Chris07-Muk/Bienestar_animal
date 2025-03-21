@@ -15,8 +15,8 @@ class Login extends BaseController
 
     private function cargar_datos(){
         $data = array();
-        $data['nombre_pagina'] = 'Login';
-        $data['titulo_pagina'] = 'Login';
+        $data['nombre_pagina'] = 'login';
+        $data['titulo_pagina'] = 'login';
 
         return $data;
     }//end cargar_datos
@@ -65,7 +65,7 @@ class Login extends BaseController
         } //end if
         else {
         crear_mensaje("Hola de nuevo " . $this->session->nombre_usuario . " al panel de administración", "¡Bienvenido!", TOASTR_INFO);
-        return redirect()->to(route_to("Dashboard"));
+        return redirect()->to(route_to("dashboard"));
     } //end if
 }else {
         crear_mensaje("El usuario y/o contraseña son incorrectas", "Error", TOASTR_DANGER);

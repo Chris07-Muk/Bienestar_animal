@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Reporte_Visualizar extends BaseController
 {
-    private $view = 'panel/Reporte_Visualizar'; // Vista del dashboard
+    private $view = 'panel/reporte_visualizar'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -88,10 +88,10 @@ class Reporte_Visualizar extends BaseController
                 $datos['imagen'] = $nuevoNombre;
             }
 
-            return redirect()->to('/Reportes_Aceptados')->with('success', 'Reporte actualizado correctamente.');
+            return redirect()->to('reportes_aceptados')->with('success', 'Reporte actualizado correctamente.');
         }
 
-        return $this->make_view('panel/Reporte_Visualizar', $data);
+        return $this->make_view('reporte_visualizar', $data);
     }
 
 }

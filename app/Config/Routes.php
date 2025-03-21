@@ -18,7 +18,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php')) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('');
+$routes->setDefaultController('Login');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -34,98 +34,77 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 //$routes->get('/', 'Home::index');
 
-//Routes of login
-//Login
-//Login
-
-//$routes->get('/', 'Usuario\Login::index', ['as' =>'login']);
-
-$routes->get('/', 'Portal\Portal::index', ['as' => 'portal']);
-
-
-$routes->get('/login', 'Usuario/Login::index');
-$routes->get('/registro', 'Usuario/Registro::index');
-$routes->post('/validar_usuario', 'Usuario/Login::validar_usuario', ['as' => 'validar_usuario']);
-$routes->get('/logout', 'Usuario/Logout::index', ['as' => 'logout']);
-
-
-//Routes of panel admin
-$routes->get('/Inicio', 'Inicio::index');
-$routes->get('/Dashboard', 'Panel/Dashboard::index');
-
-//Routes of usuarios
-$routes->get('/Usuarios', 'Panel/Usuarios::index');
-//$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
-//$routes->get('/usuarios_pendientes', 'Panel/usuarios_pendientes::index');
-$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
-$routes->get('/usuarios_pendientes', 'Panel/usuarios_pendientes::index');
-$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
-
-//Routes of reportes
-$routes->get('/Reportes_Aceptados', 'Panel/Reportes_Aceptados::index');
-$routes->get('/Reportes_Pendientes', 'Panel/Reportes_Pendientes::index');
-$routes->get('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1', ['as' => 'Reporte_Visualizar']);
-$routes->post('/Reporte_Visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1');
-
-$routes->get('/Reporte_eliminar/(:num)', 'Panel\Reportes_Aceptados::eliminar/$1', ['as' => 'eliminar_reporte']);
-$routes->get('/Reporte_eliminar/(:num)', 'Panel\Reportes_Pendientes::eliminar/$1', ['as' => 'eliminar_reporte_pendiente']);
-
-$routes->get('/Reporte_activar/(:num)', 'Panel\Reportes_Pendientes::activar/$1', ['as' => 'activar_reporte_pendiente']);
-$routes->post('/Reporte_agregar', 'Panel\Reportes_Pendientes::guardar');
-
-
-// Routes of refugios
-$routes->get('/Refugios', 'Panel/Refugios::index');
-$routes->post('/Refugios_eliminar/(:num)', 'Panel\Refugios::eliminar/$1', ['as' => 'eliminar_refugio']);
-$routes->get('/Refugios_agregar', 'Panel\Refugios::agregar', ['as' => 'agregar_refugio']); // Ruta para mostrar el formulario
-$routes->post('/Refugios_agregar', 'Panel\Refugios::guardar', ['as' => 'guardar_refugio']); // Ruta para procesar el formulario
-
-
-// Ruta para ver las adopciones
-$routes->get('/Adopciones', 'Panel\Adopciones::index');
-
-// Ruta para agregar una adopción
-$routes->get('/Adopciones_agregar', 'Panel\Adopciones::agregar', ['as' => 'agregar_adopcion']);
-$routes->post('/Adopciones_agregar', 'Panel\Adopciones::guardar', ['as' => 'guardar_adopcion']);
-
-// Ruta para eliminar una adopción
-$routes->post('/Adopciones_eliminar/(:num)', 'Panel\Adopciones::eliminar/$1', ['as' => 'eliminar_adopcion']);
-
-
-
-
-// $routes->get('/Adopciones', 'Panel/Adopciones::index');
-//$routes->get('/usuarios_aceptados', 'Panel/usuarios_aceptados::index');
-
-
-//Routes of public
-$routes->get('/Portal', 'Portal/Portal::index' );
-$routes->get('/Nosotros', 'Portal/Nosotros::index');
-$routes->get('/Servicios', 'Portal/Servicios::index');
-
-$routes->get('/Reportar', 'Portal/Reportar::index');
+// =======================
+// Rutas Públicas (Portal)
+// =======================
+$routes->get('/', 'Portal\Portal::index', ['as' => '']);
+$routes->get('/portal', 'Portal\Portal::index', ['as' => 'portal']);
+$routes->get('/nosotros', 'Portal\Nosotros::index', ['as' => 'nosotros']);
+$routes->get('/servicios', 'Portal\Servicios::index', ['as' => 'servicios']);
+$routes->get('/reportar', 'Portal\Reportar::index', ['as' => 'reportar']);
 $routes->post('/reportar', 'Portal\Creacion_Reportes::guardar', ['as' => 'generar_reporte']);
+$routes->get('/adoptar', 'Portal\Adoptar::index',['as' => 'adoptar']);
+$routes->get('/contactanos', 'Portal\Contactanos::index',['as' => 'contactanos']);
+$routes->get('/reportes_activos', 'Portal\Ver_reportes::index', ['as' => 'reportes_activos']);
 
-$routes->get('/Adoptar', 'Portal/Adoptar::index');
+// =======================
+// Autenticación (Usuarios)
+// =======================
+$routes->get('/login', 'Usuario\Login::index');
+$routes->post('/validar_usuario', 'Usuario\Login::validar_usuario', ['as' => 'validar_usuario']);
+$routes->get('/logout', 'Usuario\Logout::index', ['as' => 'logout']);
+$routes->get('/registro', 'Usuario\Registro::index');
 
+// =======================
+// Panel de Administración
+// =======================
+$routes->get('/inicio', 'Panel\Inicio::index');
+$routes->get('/dashboard', 'Panel\Dashboard::index');
 
-$routes->get('/Contactanos', 'Portal/Contactanos::index');
+// -----------------
+// Gestión Usuarios
+// -----------------
+$routes->get('/usuarios', 'Panel\Usuarios::index');
+//$routes->get('/usuarios_aceptados', 'Panel\Usuarios_Aceptados::index');
+$routes->get('/usuarios_pendientes', 'Panel\Usuarios_Pendientes::index');
 
-// $routes->get('/Mascotas_Perdidas', 'Portal/Mascotas_Perdidas::index');
-$routes->get('/reportes-activos', 'Portal\ver_reportes::listarReportesActivos', ['as' => 'reportes_activos']);
-
-
-
-// =====================================
-// USUARIOS ACEPTADOS (CRUD PRINCIPAL)
-// =====================================
-$routes->get('administracion_usuarios', 'Panel/Usuarios::index', ['as' => 'administracion_usuarios']);
-$routes->get('usuario_nuevo', 'Panel/Usuario_nuevo::index', ['as' => 'usuario_nuevo']);
-$routes->post('registrar_usuario', 'Panel/Usuarios::registrar_usuario', ['as' => 'registrar_usuario']);
+// CRUD Usuarios
+$routes->get('/administracion_usuarios', 'Panel\Usuarios::index', ['as' => 'administracion_usuarios']);
+$routes->get('/usuario_nuevo', 'Panel\Usuario_Nuevo::index', ['as' => 'usuario_nuevo']);
+$routes->post('/registrar_usuario', 'Panel\Usuarios::registrar_usuario', ['as' => 'registrar_usuario']);
 $routes->get('/obtener_usuario/(:num)', 'Panel\Usuarios::obtener_datos_usuario/$1', ['as' => 'obtener_usuario']);
-$routes->post('editar_usuario', 'Panel\Usuarios::actualizar', ['as' => 'editar_usuario']);
+$routes->post('/editar_usuario', 'Panel\Usuarios::actualizar', ['as' => 'editar_usuario']);
 $routes->get('/estatus_usuario/(:num)/(:num)', 'Panel\Usuarios::estatus/$1/$2', ['as' => 'estatus_usuario']);
-$routes->get('eliminar_usuario/(:num)', 'Panel\Usuarios::eliminar/$1', ['as' => 'eliminar_usuario']);
+$routes->get('/eliminar_usuario/(:num)', 'Panel\Usuarios::eliminar/$1', ['as' => 'eliminar_usuario']);
+
+// -----------------
+// Gestión Reportes
+// -----------------
+$routes->get('/reportes_aceptados', 'Panel\Reportes_Aceptados::index');
+$routes->get('/reportes_pendientes', 'Panel\Reportes_Pendientes::index');
+$routes->get('/reporte_visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1', ['as' => 'reporte_visualizar']);
+$routes->post('/reporte_visualizar/(:num)', 'Panel\Reporte_Visualizar::vizualizar/$1');
+$routes->get('/reporte_eliminar/(:num)', 'Panel\Reportes_Aceptados::eliminar/$1', ['as' => 'eliminar_reporte']);
+$routes->get('/reporte_eliminar_pendiente/(:num)', 'Panel\Reportes_Pendientes::eliminar/$1', ['as' => 'eliminar_reporte_pendiente']);
+$routes->get('/reporte_activar/(:num)', 'Panel\Reportes_Pendientes::activar/$1', ['as' => 'activar_reporte_pendiente']);
+$routes->post('/reporte_agregar', 'Panel\Reportes_Pendientes::guardar');
+
+// -----------------
+// Gestión Refugios
+// -----------------
+$routes->get('/refugios', 'Panel\Refugios::index');
+$routes->get('/refugios_agregar', 'Panel\Refugios::agregar', ['as' => 'agregar_refugio']);
+$routes->post('/refugios_agregar', 'Panel\Refugios::guardar', ['as' => 'guardar_refugio']);
+$routes->post('/refugios_eliminar/(:num)', 'Panel\Refugios::eliminar/$1', ['as' => 'eliminar_refugio']);
+
+// -----------------
+// Gestión Adopciones
+// -----------------
+$routes->get('/adopciones', 'Panel\Adopciones::index');
+$routes->get('/adopciones_agregar', 'Panel\Adopciones::agregar', ['as' => 'agregar_adopcion']);
+$routes->post('/adopciones_agregar', 'Panel\Adopciones::guardar', ['as' => 'guardar_adopcion']);
+$routes->post('/adopciones_eliminar/(:num)', 'Panel\Adopciones::eliminar/$1', ['as' => 'eliminar_adopcion']);
+
 
 /*
  * --------------------------------------------------------------------

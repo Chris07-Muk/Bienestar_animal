@@ -7,13 +7,17 @@ use App\Controllers\BaseController;
 
 class Ver_reportes extends BaseController{
 
-    private $view = 'Portal/mascotas_perdidas';
+    private $view = 'portal/mascotas_perdidas';
 
     private function load_data()
     {
         $data['nombre_pagina'] = 'Reportes';
         $data['titulo_pagina'] = 'mascotas_perdidas';
-
+        
+        // Agregar los reportes activos
+        $reporteModel = new Tabla_reportes();
+        $data['reportes'] = $reporteModel->getReportesActivos();
+        
         return $data;
 
     }
@@ -22,22 +26,13 @@ class Ver_reportes extends BaseController{
     {
         return view($name_view, $data);
     }
-
-
-    public function listarReportesActivos()
-    {
-        $reporteModel = new Tabla_reportes();
-        
-        // Cargar los datos principales
-        $data = $this->load_data();
-        
-        // Agregar los reportes activos
-        $data['reportes'] = $reporteModel->getReportesActivos();
-
-        // Retornar la vista con los datos correctos
-        return view('portal/Mascotas_Perdidas', $data);
+    
+    
+    public function index(){
+      // Cargar los datos principales
+      $data = $this->load_data();
+      return view($this->view, $data);
     }
-
 
 
 

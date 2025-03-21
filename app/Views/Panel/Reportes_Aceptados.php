@@ -18,6 +18,7 @@
                 <th>Descripcion</th>
                 <th>ubicacion</th>
                 <th>Imagen</th>
+              	<th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -36,7 +37,7 @@
                     </td>
                     <td>
                         <!-- Aquí puedes agregar enlaces o botones para editar/eliminar usuarios -->
-                        <a href="<?= route_to('Reporte_Visualizar', $reporte->id_reporte) ?>" class="btn btn-secondary">Detalles</a>
+                        <a href="<?= route_to('reporte_Visualizar', $reporte->id_reporte) ?>" class="btn btn-secondary">Detalles</a>
 
                         <a href="<?= route_to('eliminar_reporte', $reporte->id_reporte) ?>" class="btn btn-danger"
                         onclick="return confirm('¿Estás seguro de que deseas eliminar este reporte? Esta acción no se puede deshacer.');">

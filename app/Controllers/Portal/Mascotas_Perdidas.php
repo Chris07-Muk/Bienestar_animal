@@ -5,7 +5,7 @@ namespace App\Controllers\Portal;
 use App\Controllers\BaseController;
 class Mascotas_Perdidas extends BaseController
 {
-    private $view = 'portal/Mascotas_Perdidas';
+    private $view = 'portal/mascotas_perdidas';
 
     private function load_data(){
         $data = array();

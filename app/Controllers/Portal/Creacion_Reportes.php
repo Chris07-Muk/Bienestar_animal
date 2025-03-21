@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Creacion_Reportes extends BaseController{
 
-    private $view = 'Portal/Creacion_Reporte';
+    private $view = 'portal/creacion_Reporte';
 
 
     public function guardar()
@@ -23,7 +23,7 @@ class Creacion_Reportes extends BaseController{
         ];
 
         if ($reporteModel->agregarReporte($data)) {
-            return redirect()->to('Reportar')->with('success', 'Reporte enviado correctamente.');
+            return redirect()->to('reportar')->with('success', 'Reporte enviado correctamente.');
         } else {
             return redirect()->back()->withInput()->with('error', 'Error al enviar el reporte.');
         }

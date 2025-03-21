@@ -1,6 +1,6 @@
 <!-- Importartar las depedencias -->
 
-<?= $this->extend("Plantillas/portal_base") ?>
+<?= $this->extend("plantillas/portal_base") ?>
 
 <!-- Titulo -->
 <?= $this->section('titulo') ?>

@@ -6,7 +6,7 @@
 
 <div class="container mt-4">
         <h2 class="mb-4">Agregar Nueva Adopción</h2>
-        <a href="<?= route_to('ver_adopciones') ?>" class="btn btn-secondary mb-3">Volver a Adopciones</a>
+        <a href="<?= route_to('adopciones') ?>" class="btn btn-secondary mb-3">Volver a Adopciones</a>
         <div class="card">
             <div class="card-body">
                 <form action="<?= route_to('guardar_adopcion') ?>" method="POST">

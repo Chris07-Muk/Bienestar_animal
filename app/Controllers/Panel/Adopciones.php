@@ -8,7 +8,7 @@ use App\Models\Tabla_refugios; // Importar el modelo
 
 class Adopciones extends BaseController
 {
-    private $view = 'panel/Adopciones'; // Vista del dashboard
+    private $view = 'panel/adopciones'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -42,12 +42,12 @@ class Adopciones extends BaseController
         $navegacion = array(
             array(
                 'href' => route_to('/dashboard'),
-                'tarea' => 'Usuarios',
+                'tarea' => 'usuarios',
                 'icon' => 'fa fa-user',
             ),
             array(
                 'href' => '#',
-                'tarea' => 'Usuario nuevo',
+                'tarea' => 'usuario nuevo',
                 'icon' => 'fa fa-user',
             ),
         );
@@ -83,7 +83,7 @@ class Adopciones extends BaseController
         $data['refugios'] = $refugioModel->getRefugio(); // Obtener los refugios disponibles
 
 
-        return $this->make_view('Panel/agregar_adopcion', $data); // Vista de formulario para agregar
+        return $this->make_view('panel/agregar_adopcion', $data); // Vista de formulario para agregar
     }
 
 
@@ -102,9 +102,9 @@ class Adopciones extends BaseController
 
         // Insertar el nuevo refugio en la base de datos
         if ($adopcionModel->insert($data)) {
-            return redirect()->to(route_to('Adopciones'))->with('success', 'Refugio agregado correctamente.');
+            return redirect()->to(route_to('adopciones'))->with('success', 'Refugio agregado correctamente.');
         } else {
-            return redirect()->to(route_to('Adopciones'))->with('error', 'Hubo un problema al agregar el refugio.');
+            return redirect()->to(route_to('adopciones'))->with('error', 'Hubo un problema al agregar el refugio.');
         }
 
         }
@@ -115,9 +115,9 @@ class Adopciones extends BaseController
         $adopcionModel = new Tabla_adopciones();
         
         if ($adopcionModel->eliminarAdopcion($id_adopcion)) {
-            return redirect()->to(route_to('Adopciones'))->with('success', 'Refugio eliminado correctamente.');
+            return redirect()->to(route_to('adopciones'))->with('success', 'Refugio eliminado correctamente.');
         } else {
-            return redirect()->to(route_to('Adopciones'))->with('error', 'No se pudo eliminar el refugio.');
+            return redirect()->to(route_to('adopciones'))->with('error', 'No se pudo eliminar el refugio.');
         }
     }
 

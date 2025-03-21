@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Reportes_Aceptados extends BaseController
 {
-    private $view = 'panel/Reportes_Aceptados'; // Vista del dashboard
+    private $view = 'panel/reportes_aceptados'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -84,7 +84,7 @@ class Reportes_Aceptados extends BaseController
         // Verificar si el reporte existe antes de eliminar
         $reporte = $modelo->find($id);
         if (!$reporte) {
-            return redirect()->to('/Reportes_Aceptados')->with('error', 'Reporte no encontrado.');
+            return redirect()->to('reportes_aceptados')->with('error', 'Reporte no encontrado.');
         }
 
         // Eliminar imagen asociada si existe
@@ -98,7 +98,7 @@ class Reportes_Aceptados extends BaseController
         // Eliminar el reporte
         $modelo->eliminarReporte($id);
 
-        return redirect()->to('/Reportes_Aceptados')->with('success', 'Reporte eliminado correctamente.');
+        return redirect()->to('reportes_aceptados')->with('success', 'Reporte eliminado correctamente.');
     }
 
 

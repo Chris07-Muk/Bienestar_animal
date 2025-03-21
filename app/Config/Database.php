@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => 'localhost', //servicio de base de datos host
-        'username' => 'root',
-        'password' => '',
-        'database' => 'bd_bienestar',
+        'hostname' => 'db5017512167.hosting-data.io', //servicio de base de datos host
+        'username' => 'dbu1041225',
+        'password' => 'perrotrecho176.2',
+        'database' => 'dbs14039413',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,

@@ -6,7 +6,7 @@ function configurar_menu_panel() {
     // Opción Dashboard
     $menu['dashboard'] = [
         'is_active' => false,
-        'href' => route_to("Dashboard"),
+        'href' => route_to("dashboard"),
         'text' => 'Dashboard',
         'icon' => 'fa fa-area-chart',
         'submenu' => [],
@@ -21,7 +21,7 @@ function configurar_menu_panel() {
         'submenu' => [
             [
                 'is_active' => false,
-                'href' => route_to('Usuarios'),
+                'href' => route_to('administracion_usuarios'),
                 'text' => 'Usuarios aceptados',
                 'icon' => 'fa fa-battery-three-quarters'
             ],
@@ -45,13 +45,13 @@ function configurar_menu_panel() {
             
             [
                 'is_active' => false,
-                'href' => route_to('Reportes_Aceptados'),
+                'href' => route_to('reportes_aceptados'),
                 'text' => 'Reportes aceptados',
                 'icon' => 'fa fa-battery-three-quarters'
             ],
             [
                 'is_active' => false,
-                'href' => route_to('Reportes_Pendientes'),
+                'href' => route_to('reportes_pendientes'),
                 'text' => 'Reportes pendientes',
                 'icon' => 'fa fa-battery-half'
             ]
@@ -61,7 +61,7 @@ function configurar_menu_panel() {
 
 	$menu['Adopciones'] = [
         'is_active' => false,
-        'href' => route_to("Adopciones"),
+        'href' => route_to("adopciones"),
         'text' => 'Adopciones',
         'icon' => 'fa fa-area-chart',
         'submenu' => [],
@@ -70,7 +70,7 @@ function configurar_menu_panel() {
 
     $menu['Refugios'] = [
         'is_active' => false,
-        'href' => route_to("Refugios"),
+        'href' => route_to("refugios"),
         'text' => 'Refugios',
         'icon' => 'fa fa-area-chart',
         'submenu' => [],

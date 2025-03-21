@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class Dashboard extends BaseController
 {
-    private $view = 'panel/Dashboard'; // Vista del dashboard
+    private $view = 'panel/dashboard'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()

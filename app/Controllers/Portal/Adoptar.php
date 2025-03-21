@@ -9,7 +9,7 @@ use App\Controllers\BaseController;
 
 class Adoptar extends BaseController{
 
-    private $view = 'Portal/Adoptar';
+    private $view = 'portal/adoptar';
 
     private function load_data()
     {

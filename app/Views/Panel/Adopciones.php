@@ -36,5 +36,5 @@
 
 
 
-<a href="<?= route_to('agregar_adopcion') ?>" class="btn btn-success">Agregar Refugio</a>
+<a href="<?= route_to('agregar_adopcion') ?>" class="btn btn-success">Agregar una nueva adopción</a>
 <?= $this->endSection() ?>

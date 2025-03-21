@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Refugios extends BaseController
 {
-    private $view = 'panel/Refugios'; // Vista del dashboard
+    private $view = 'panel/refugios'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
@@ -59,19 +59,22 @@ class Refugios extends BaseController
 
     private function make_view($name_view = '', $content = array())
     {
+        // Verificar si el archivo de la vista existe antes de cargarlo
+        if (!is_file(APPPATH . 'Views/' . $name_view . '.php')) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException("La vista {$name_view} no se encontró.");
+        }
+
         $content['menu_lateral'] = crear_menu_panel(); // Agregar menú lateral
         return view($name_view, $content);
     }
 
-
     public function index()
     {
-        $refugioModel = new Tabla_refugios(); // Instancia del modelo Tabla_usuarios
+        $refugioModel = new Tabla_refugios(); // Instancia del modelo
         $data = $this->load_data(); // Cargar datos de usuario y navegación
 
-        // Obtener usuarios activos de la base de datos
+        // Obtener refugios activos de la base de datos
         $data['refugios'] = $refugioModel->getRefugio();
-        // dd($data);
 
         // Pasa los datos a la vista
         return $this->make_view($this->view, $data);
@@ -80,7 +83,7 @@ class Refugios extends BaseController
     public function agregar()
     {
         $data = $this->load_data(); // Cargar datos de usuario y navegación
-        return $this->make_view('Panel/agregar_refugio', $data); // Vista de formulario para agregar
+        return $this->make_view('panel/agregar_refugio', $data); // Vista de formulario para agregar
     }
 
     // Guardar el nuevo refugio en la base de datos
@@ -88,18 +91,26 @@ class Refugios extends BaseController
     {
         $refugioModel = new Tabla_refugios(); // Instancia del modelo
 
-        // Capturar los datos del formulario
+        // Capturar los datos del formulario con validación
+        $nombre = $this->request->getPost('nombre_refugio');
+        $direccion = $this->request->getPost('direccion');
+        $capacidad = $this->request->getPost('capacidad');
+
+        if (empty($nombre) || empty($direccion) || empty($capacidad)) {
+            return redirect()->to(route_to('refugios'))->with('error', 'Todos los campos son obligatorios.');
+        }
+
         $data = [
-            'nombre_refugio' => $this->request->getPost('nombre_refugio'),
-            'direccion' => $this->request->getPost('direccion'),
-            'capacidad' => $this->request->getPost('capacidad'),
+            'nombre_refugio' => $nombre,
+            'direccion' => $direccion,
+            'capacidad' => $capacidad,
         ];
 
         // Insertar el nuevo refugio en la base de datos
         if ($refugioModel->agregarRefugio($data)) {
-            return redirect()->to(route_to('Refugios'))->with('success', 'Refugio agregado correctamente.');
+            return redirect()->to(route_to('refugios'))->with('success', 'Refugio agregado correctamente.');
         } else {
-            return redirect()->to(route_to('Refugios'))->with('error', 'Hubo un problema al agregar el refugio.');
+            return redirect()->to(route_to('refugios'))->with('error', 'Hubo un problema al agregar el refugio.');
         }
     }
 
@@ -107,12 +118,16 @@ class Refugios extends BaseController
     {
         $refugioModel = new Tabla_refugios(); // Instancia del modelo
 
+        // Verificar que el refugio exista antes de eliminarlo
+        if (!$refugioModel->find($id_refugio)) {
+            return redirect()->to(route_to('refugios'))->with('error', 'El refugio no existe.');
+        }
+
         // Llamar a la función eliminarRefugio
         if ($refugioModel->eliminarRefugio($id_refugio)) {
-            return redirect()->to(route_to('Refugios'))->with('success', 'Refugio eliminado correctamente.');
+            return redirect()->to(route_to('refugios'))->with('success', 'Refugio eliminado correctamente.');
         } else {
-            return redirect()->to(route_to('Refugios'))->with('error', 'No se pudo eliminar el refugio.');
+            return redirect()->to(route_to('refugios'))->with('error', 'No se pudo eliminar el refugio.');
         }
     }
-
 }

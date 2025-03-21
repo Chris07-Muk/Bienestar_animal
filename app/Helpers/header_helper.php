@@ -14,13 +14,18 @@ function header_navbar($nav_items = array()) {
                 <ul class="navbar-nav mr-auto">';
 
     foreach ($nav_items as $item) {
-        $href_path = trim(parse_url(base_url($item["href"]), PHP_URL_PATH), '/'); // Obtener solo la ruta limpia
+        // Verificar que $item["href"] no sea null o vacío y luego pasar a parse_url y trim()
+        $href = $item["href"] ?? '';  // Si href es null, asigna una cadena vacía
+        $url_path = parse_url(base_url($href), PHP_URL_PATH); // Obtiene la ruta de la URL
+
+        // Asegurarse de que la URL no sea null antes de pasar a trim()
+        $href_path = $url_path ? trim($url_path, '/') : ''; // Usar una cadena vacía si $url_path es null
 
         // Verificar si la URL actual coincide con la ruta del enlace
         $is_active = ($current_path === $href_path) ? 'active' : '';
 
         $html .= '<li class="nav-item ' . $is_active . '">
-                    <a class="nav-link" href="' . base_url($item["href"]) . '">
+                    <a class="nav-link" href="' . base_url($href) . '">
                         ' . (isset($item["icon"]) ? '<i class="nav-icon ' . $item["icon"] . '"></i> ' : '') . $item["tarea"] . '
                     </a>
                 </li>';

@@ -60,12 +60,12 @@
                      </div>
                   </div>
                   <?= header_navbar([
-                     ["href" => route_to('Portal'), "tarea" => "Inicio", "active" => true],
-                     ["href" => route_to('Nosotros'), "tarea" => "Nosotros"],
-                     ["href" => route_to('Servicios'), "tarea" => "Nuestros servicios"],
-                     ["href" => route_to('Reportar'), "tarea" => "Reportar mascota"],
+                     ["href" => route_to('portal'), "tarea" => "Inicio", "active" => true],
+                     ["href" => route_to('nosotros'), "tarea" => "Nosotros"],
+                     ["href" => route_to('servicios'), "tarea" => "Nuestros servicios"],
+                     ["href" => route_to('reportar'), "tarea" => "Reportar mascota"],
                      ["href" => route_to('reportes_activos'), "tarea" => "Mascotas perdidas"],
-                     ["href" => route_to('Adoptar'), "tarea" => "Adoptar"],
+                     ["href" => route_to('adoptar'), "tarea" => "Adoptar"],
                      ["href" => route_to('login'), "tarea" => "Login"]
                   ]); ?>
                   </div>
@@ -100,16 +100,16 @@
                   <form id="request" class="main_form">
                      <div class="row">
                         <div class="col-md-12 ">
-                           <input class="contactus" placeholder="Nombre" type="type" name="Name"> 
+                           <input class="contactus" placeholder="Nombre" type="type" name="Name" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Correo" type="type" name="Email"> 
+                           <input class="contactus" placeholder="Correo" type="type" name="Email" required> 
                         </div>
                         <div class="col-md-12">
-                           <input class="contactus" placeholder="Número de teléfono" type="type" name="Phone Number">                          
+                           <input class="contactus" placeholder="Número de teléfono" type="type" name="Phone Number" required>                          
                         </div>
                         <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name">Mensaje</textarea>
+                           <textarea class="textarea" placeholder="Mensaje" type="type" Message="Name" required>Mensaje</textarea>
                         </div>
                         <div class="col-md-12">
                            <button class="send_btn">Enviar</button>
@@ -192,12 +192,21 @@
         </div>
     </footer>
     <!-- end footer -->
+
+    
     <!-- Javascript files -->
     <script src="<?=base_url(RECURSOS_PORTAL_JS.'jquery.min.js') ?>"></script>
     <script src="<?=base_url(RECURSOS_PORTAL_JS.'bootstrap.bundle.min.js') ?>"></script>
-    <script src="<?=base_url(RECURSOS_PORTAL_JS.'jquery-3.0.0.min.js') ?>"></script>
+    <script src="<?=base_url(RECURSOS_PORTAL_JS.'jquery-3.0.0.min.js') ?>"></script> 
+
+        
+    <!-- JQueryValidation -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/additional-methods.min.js"></script> -->
+
     <!-- Sidebar -->
     <script src="<?=base_url(RECURSOS_PORTAL_JS.'jquery.mCustomScrollbar.concat.min.js') ?>"></script>
     <script src="<?=base_url(RECURSOS_PORTAL_JS.'custom.js') ?>"></script>
+
 </body>
 </html>

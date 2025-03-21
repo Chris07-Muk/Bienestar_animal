@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 class Registro extends BaseController
 {
     // Atributo específico
-    private $view = 'usuario/registro';
+    private $view = 'Usuario/registro';
     private $session = NULL;
 
     public function __construct()

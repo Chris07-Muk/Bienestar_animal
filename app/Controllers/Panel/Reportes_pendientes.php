@@ -7,7 +7,7 @@ use App\Controllers\BaseController;
 
 class Reportes_Pendientes extends BaseController
 {
-    private $view = 'panel/Reportes_Pendientes'; // Vista del dashboard
+    private $view = 'panel/reportes_pendientes'; // Vista del dashboard
     private $session = null; // Variable para almacenar la sesión
 
     public function __construct()
